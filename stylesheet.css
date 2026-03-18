@@ -1,4 +1,4 @@
-/* --- Carlson Solutions MN: Global Styles --- */
+/* --- Carlson Solutions LLC: Core Identity --- */
 
 :root {
   --cyan-accent: 34, 211, 238;
@@ -36,6 +36,18 @@ body {
 
 .heading-font { 
   font-family: 'Space Grotesk', sans-serif; 
+}
+
+/* Typography Balance */
+h1 {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 span {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 /* Header & Navigation */
@@ -93,7 +105,7 @@ header {
     box-shadow: 0 0 15px rgba(var(--cyan-accent), 0.2);
 }
 
-/* Bubbles & Accents */
+/* Status & Accents */
 .skill-bubble {
   font-size: 10px;
   font-weight: 800;
@@ -112,7 +124,7 @@ header {
   box-shadow: 0 0 15px rgba(var(--cyan-accent), 0.3);
 }
 
-/* Testimonial Carousel Styles */
+/* Testimonial Carousel */
 #carousel-track {
   display: flex;
   align-items: center;
@@ -140,7 +152,7 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Form Elements */
+/* Form Styling */
 .input-field {
   width: 100%;
   background: var(--var-card);
@@ -163,11 +175,6 @@ header {
   opacity: 0.6;
 }
 
-label {
-  display: block;
-  margin-bottom: 4px;
-}
-
 /* Animations */
 @keyframes reveal {
   from { opacity: 0; transform: translateY(20px); }
@@ -183,10 +190,6 @@ label {
   transform: scale(1.05);
 }
 
-footer a {
-    transition: color 0.2s ease;
-}
-
 /* Responsive Overrides */
 @media (max-width: 768px) {
   .testimonial-slide p {
@@ -196,5 +199,9 @@ footer a {
   
   .project-card {
     border-radius: 1.5rem;
+  }
+
+  h1 span {
+    font-size: 1.75rem; /* Better scaling for mobile headings */
   }
 }
