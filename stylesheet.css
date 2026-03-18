@@ -1,0 +1,200 @@
+/* --- Carlson Solutions MN: Global Styles --- */
+
+:root {
+  --cyan-accent: 34, 211, 238;
+  --var-bg: #09090b;
+  --var-card: rgba(24, 24, 27, 0.6);
+  --var-border: rgba(39, 39, 42, 0.5);
+  --var-main: #ffffff;
+  --var-dim: #a1a1aa;
+  --var-text-main: #ffffff;
+}
+
+/* High-Contrast Light Mode */
+body.light-mode {
+  --var-bg: #ffffff;
+  --var-card: #f8fafc;
+  --var-border: #cbd5e1;
+  --var-main: #0f172a; 
+  --var-dim: #334155;  
+  --var-text-main: #020617;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--var-bg);
+  color: var(--var-main);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.heading-font { 
+  font-family: 'Space Grotesk', sans-serif; 
+}
+
+/* Header & Navigation */
+header {
+  background: transparent;
+  backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid var(--var-border);
+}
+
+.nav-link {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--var-dim);
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link-active { 
+  color: rgb(var(--cyan-accent)); 
+}
+
+.hero-bg {
+  background: radial-gradient(circle at top, rgba(var(--cyan-accent), 0.08) 0%, transparent 70%);
+}
+
+/* Service Cards */
+.project-card {
+  background: var(--var-card);
+  border: 1px solid var(--var-border);
+  border-radius: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(var(--cyan-accent), 0.5);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon-box {
+  width: 56px;
+  height: 56px;
+  background: var(--var-bg);
+  border: 1px solid var(--var-border);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .service-icon-box {
+    border-color: rgb(var(--cyan-accent));
+    box-shadow: 0 0 15px rgba(var(--cyan-accent), 0.2);
+}
+
+/* Bubbles & Accents */
+.skill-bubble {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  background: rgba(var(--cyan-accent), 0.1);
+  color: rgb(var(--cyan-accent));
+  border-radius: 99px;
+  border: 1px solid rgba(var(--cyan-accent), 0.2);
+}
+
+.glow-bar {
+  width: 4px;
+  background: linear-gradient(to bottom, rgb(var(--cyan-accent)), transparent);
+  border-radius: 99px;
+  box-shadow: 0 0 15px rgba(var(--cyan-accent), 0.3);
+}
+
+/* Testimonial Carousel Styles */
+#carousel-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-slide {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s;
+  transform: translateY(15px);
+  width: 100%;
+}
+
+.testimonial-slide.active-slide {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#carousel-dots div {
+  transition: all 0.3s ease;
+}
+
+/* Form Elements */
+.input-field {
+  width: 100%;
+  background: var(--var-card);
+  border: 1px solid var(--var-border);
+  border-radius: 14px;
+  padding: 1.1rem;
+  color: var(--var-main);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.input-field:focus {
+  border-color: rgb(var(--cyan-accent));
+  background: var(--var-bg);
+}
+
+.input-field::placeholder {
+  color: var(--var-dim);
+  opacity: 0.6;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Animations */
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-reveal { 
+  animation: reveal 0.8s ease-out forwards; 
+}
+
+#theme-toggle:hover {
+  background: var(--var-border);
+  transform: scale(1.05);
+}
+
+footer a {
+    transition: color 0.2s ease;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .testimonial-slide p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .project-card {
+    border-radius: 1.5rem;
+  }
+}

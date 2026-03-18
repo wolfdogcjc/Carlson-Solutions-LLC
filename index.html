@@ -1,11 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlson Solutions MN | UniFi Systems & Consulting</title>
+  <meta name="description" content="Expert UniFi network configuration, security consulting, and building efficiency auditing serving Chisago County.">
+  
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
-    <h1>Hello World</h1>
+<body class="antialiased selection:bg-cyan-500/30">
+
+  <div id="mobile-menu" class="fixed inset-0 bg-zinc-950/98 backdrop-blur-xl z-[100] hidden flex-col items-center justify-center gap-8">
+    <i class="fas fa-xmark absolute top-8 right-8 text-white hover:text-cyan-400 transition-colors text-3xl cursor-pointer" id="close-mobile"></i>
+    <a href="#home" class="mobile-link text-3xl font-black uppercase tracking-widest text-white">Home</a>
+    <a href="#services" class="mobile-link text-3xl font-black uppercase tracking-widest text-white">Services</a>
+    <a href="#testimonials" class="mobile-link text-3xl font-black uppercase tracking-widest text-white">Reviews</a>
+    <a href="#about" class="mobile-link text-3xl font-black uppercase tracking-widest text-white">About</a>
+    <a href="#contact" class="px-10 py-4 bg-cyan-400 text-zinc-950 rounded-full font-bold uppercase tracking-widest text-xs">Get a Quote</a>
+  </div>
+
+  <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-x-4 group">
+        <img src="/assets/logo.svg" alt="Carlson Solutions Logo" class="w-10 h-10 transition-transform group-hover:rotate-12">
+        <span class="heading-font text-xl font-bold tracking-tighter text-var-main">Carlson Solutions LLC</span>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-x-10">
+        <a href="#home" class="nav-link nav-link-active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+      
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" class="p-2.5 rounded-full bg-var-card border border-var-border text-var-dim hover:text-cyan-400 transition-all" aria-label="Toggle Theme">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+        <div id="mobile-bars-trigger" class="md:hidden p-2 text-var-main cursor-pointer text-xl">
+          <i class="fas fa-bars"></i>
+        </div>
+        <a href="#contact" class="hidden sm:flex px-6 py-2.5 bg-var-text-main text-var-bg rounded-full font-bold text-xs uppercase tracking-widest hover:bg-cyan-400 transition-all items-center gap-2">
+          Request Quote <i class="fas fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-bg pt-40 pb-20">
+      <div class="max-w-7xl mx-auto px-8 text-center animate-reveal relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-black uppercase tracking-widest mb-8">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+          </span>
+          Serving Chisago County
+        </div>
+        <h1 class="heading-font text-5xl md:text-7xl font-bold tracking-tighter mb-6 text-var-main leading-[1.1]">
+          UniFi Systems. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Configuration.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-var-dim max-w-2xl mx-auto leading-relaxed mb-10 font-medium">
+          Professional equipment provisioning and building audits. We configure the networks and monitor the efficiency that powers your property.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-zinc-950 rounded-full font-bold uppercase tracking-widest text-xs transition-all shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+            Explore Services
+          </a>
+          <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-var-card text-var-main border border-var-border rounded-full font-bold uppercase tracking-widest text-xs transition-all hover:border-zinc-500">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-24 bg-var-bg">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="heading-font text-3xl md:text-4xl font-bold mb-16 flex items-center justify-center gap-4 text-var-main text-center">
+          <i class="fas fa-microchip text-cyan-400 text-2xl"></i> Engineering Solutions
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="project-card p-8 flex flex-col">
+            <div class="service-icon-box mb-6">
+              <i class="fas fa-server text-2xl text-cyan-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-var-main mb-3">UniFi Configuration</h3>
+            <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
+              Expert setup of UniFi Dream Machines, Switches, and Access Points. We provision your network infrastructure on existing wiring for maximum reliability.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="skill-bubble">UniFi OS</span>
+              <span class="skill-bubble">Network Admin</span>
+            </div>
+          </div>
+
+          <div class="project-card p-8 flex flex-col">
+            <div class="service-icon-box mb-6">
+              <i class="fas fa-user-shield text-2xl text-cyan-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-var-main mb-3">Security Consulting</h3>
+            <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
+              Adversarial audits focused on physical vulnerabilities. We identify weaknesses in door hardware, access control, and circuit security.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="skill-bubble">Audit</span>
+              <span class="skill-bubble">Physical Security</span>
+            </div>
+          </div>
+
+          <div class="project-card p-8 flex flex-col">
+            <div class="service-icon-box mb-6">
+              <i class="fas fa-door-open text-2xl text-cyan-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-var-main mb-3">Efficiency Audits</h3>
+            <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
+              Auditing the building envelope, focusing on vestibule air-lock integrity, air curtains, and lighting automation like motion sensors.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="skill-bubble">Vestibule Logic</span>
+              <span class="skill-bubble">Lighting Automation</span>
+            </div>
+          </div>
+
+          <div class="project-card p-8 flex flex-col">
+            <div class="service-icon-box mb-6">
+              <i class="fas fa-laptop text-2xl text-cyan-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-var-main mb-3">Office Tech Setup</h3>
+            <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
+              Integration of workstations, printers, and office peripherals. Professional configuration for local business or home office environments.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="skill-bubble">Workstations</span>
+              <span class="skill-bubble">Provisioning</span>
+            </div>
+          </div>
+
+          <div class="project-card p-8 flex flex-col">
+            <div class="service-icon-box mb-6">
+              <i class="fas fa-video text-2xl text-cyan-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-var-main mb-3">UniFi Protect Setup</h3>
+            <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
+              Configuration of UniFi cameras and NVRs. We program recording logic, detection zones, and remote access on your hardware.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="skill-bubble">Surveillance</span>
+              <span class="skill-bubble">Protect OS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-var-bg relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-16">
+          <h2 class="heading-font text-4xl font-bold text-var-main mb-4">Client Testimonials</h2>
+          <div class="flex justify-center gap-1 text-cyan-400 mb-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-var-dim uppercase tracking-widest text-xs font-black">100% 5-Star Rated Service</p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+          <div id="carousel-track" class="relative h-[550px] md:h-[350px] overflow-hidden">
+            
+            <div class="testimonial-slide absolute inset-0 opacity-0 transition-opacity duration-700 flex flex-col items-center text-center px-12 active-slide">
+              <p class="text-lg md:text-xl text-var-main italic leading-relaxed mb-8">
+                "Caleb's maturity, analytical approach, and great questions enabled him to customize a perfect set up for me in one weekend. I went from nothing to everything in 2 days. He is extremely industrious and skillful."
+              </p>
+              <div class="flex flex-col items-center gap-1">
+                <h4 class="font-bold text-cyan-400">Christa H.</h4>
+                <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" class="text-[9px] text-var-dim hover:text-cyan-400 uppercase tracking-widest transition-colors">
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="testimonial-slide absolute inset-0 opacity-0 transition-opacity duration-700 flex flex-col items-center text-center px-12">
+              <p class="text-lg md:text-xl text-var-main italic leading-relaxed mb-8">
+                "As an older single lady, the help Caleb offers is priceless! He is a young man of high integrity, mature, and gifted. He typed up extremely understandable 'Dee-structions' for me to refer to!"
+              </p>
+              <div class="flex flex-col items-center gap-1">
+                <h4 class="font-bold text-cyan-400">Delaine R.</h4>
+                <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" class="text-[9px] text-var-dim hover:text-cyan-400 uppercase tracking-widest transition-colors">
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="testimonial-slide absolute inset-0 opacity-0 transition-opacity duration-700 flex flex-col items-center text-center px-12">
+              <p class="text-lg md:text-xl text-var-main italic leading-relaxed mb-8">
+                "Carlson Solutions updated my entire business system. The technician was sharp, dependable, and brought my database up to speed. Highly recommended for any business hardware or software needs."
+              </p>
+              <div class="flex flex-col items-center gap-1">
+                <h4 class="font-bold text-cyan-400">Norm B.</h4>
+                <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" class="text-[9px] text-var-dim hover:text-cyan-400 uppercase tracking-widest transition-colors">
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="testimonial-slide absolute inset-0 opacity-0 transition-opacity duration-700 flex flex-col items-center text-center px-12">
+              <p class="text-lg md:text-xl text-var-main italic leading-relaxed mb-8">
+                "Caleb did a wonderful job setting up internet at my house and nonprofit. He explained everything in good detail and his price is very fair. I'd recommend Carlson Solutions to anyone!"
+              </p>
+              <div class="flex flex-col items-center gap-1">
+                <h4 class="font-bold text-cyan-400">Margaret K.</h4>
+                <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" class="text-[9px] text-var-dim hover:text-cyan-400 uppercase tracking-widest transition-colors">
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="testimonial-slide absolute inset-0 opacity-0 transition-opacity duration-700 flex flex-col items-center text-center px-12">
+              <p class="text-lg md:text-xl text-var-main italic leading-relaxed mb-8">
+                "Fantastic job getting our TV mounted and security cameras installed efficiently and with amazing quality. I would definitely recommend Carlson Solutions LLC!"
+              </p>
+              <div class="flex flex-col items-center gap-1">
+                <h4 class="font-bold text-cyan-400">McKenna P.</h4>
+                <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" class="text-[9px] text-var-dim hover:text-cyan-400 uppercase tracking-widest transition-colors">
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <button id="prev-slide" class="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 w-12 h-12 rounded-full border border-var-border flex items-center justify-center text-var-main hover:bg-cyan-400 hover:text-zinc-950 transition-all z-20">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button id="next-slide" class="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 w-12 h-12 rounded-full border border-var-border flex items-center justify-center text-var-main hover:bg-cyan-400 hover:text-zinc-950 transition-all z-20">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <div id="carousel-dots" class="flex justify-center gap-3 mt-8"></div>
+        </div>
+
+        <div class="mt-20 max-w-2xl mx-auto p-8 rounded-[2rem] bg-var-card border border-var-border">
+          <h3 class="heading-font text-2xl font-bold mb-6 text-center text-var-main">Submit a New Testimonial</h3>
+          <form class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="text-[10px] font-black uppercase tracking-widest text-var-dim ml-2">Name:</label>
+                <input type="text" class="input-field" placeholder="Full Name">
+              </div>
+              <div class="space-y-2">
+                <label class="text-[10px] font-black uppercase tracking-widest text-var-dim ml-2">Email:</label>
+                <input type="email" class="input-field" placeholder="Email Address">
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="text-[10px] font-black uppercase tracking-widest text-var-dim ml-2">Your Testimonial:</label>
+              <textarea rows="3" class="input-field" placeholder="Tell us about your experience..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 bg-var-main text-var-bg rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-cyan-400 transition-all">Submit Testimonial</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-32 bg-var-card/10">
+      <div class="max-w-5xl mx-auto px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="heading-font text-4xl font-bold mb-6 text-var-main">Technical Precision</h2>
+            <p class="text-var-dim text-lg leading-relaxed mb-8">
+              Based in Chisago County, we specialize in the logical configuration of your property. We bridge the gap between physical electrical installation and final system deployment, including specialized <strong>Security Consulting</strong> to assess adversarial vulnerabilities in building access.
+            </p>
+            <div class="space-y-6">
+              <div class="flex gap-6 group">
+                <div class="glow-bar"></div>
+                <div>
+                  <h4 class="text-var-main font-bold text-lg mb-1">Config Only</h4>
+                  <p class="text-var-dim text-sm">We don't pull wire—we program the brains of your infrastructure.</p>
+                </div>
+              </div>
+              <div class="flex gap-6 group">
+                <div class="glow-bar"></div>
+                <div>
+                  <h4 class="text-var-main font-bold text-lg mb-1">Efficiency Experts</h4>
+                  <p class="text-var-dim text-sm">Ensuring air curtains and lighting sensors operate as intended to save costs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-var-card border border-var-border rounded-[3rem] p-10 relative overflow-hidden text-center">
+            <h3 class="text-2xl font-bold text-var-main mb-4">Start Your Project</h3>
+            <p class="text-var-dim mb-8">Ready to have your UniFi equipment provisioned by a professional? We provide custom solutions tailored to your infrastructure.</p>
+            <a href="#contact" class="inline-flex w-full justify-center px-6 py-4 bg-cyan-400 text-zinc-950 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-cyan-300 transition-all">
+              Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-var-bg border-t border-var-border">
+      <div class="max-w-3xl mx-auto px-8">
+        <h2 class="heading-font text-4xl font-bold mb-6 text-center text-var-main">Contact Us</h2>
+        <p class="text-center text-var-dim mb-10 leading-relaxed">
+          Every project is unique. Please <strong>contact us for a quote</strong> based on your specific security and networking needs. We specialize in tailoring hardware logic and security protocols to your specific building layout.
+        </p>
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="text" class="input-field" placeholder="Full Name">
+            <input type="email" class="input-field" placeholder="Email Address">
+          </div>
+          <select class="input-field appearance-none">
+            <option>UniFi Network Configuration</option>
+            <option>Security Consulting & Audit</option>
+            <option>Efficiency & Vestibule Audit</option>
+            <option>Office System Setup</option>
+            <option>UniFi Protect Configuration</option>
+            <option>Other / Custom Request</option>
+          </select>
+          <textarea rows="4" class="input-field" placeholder="Describe your current setup..."></textarea>
+          <button type="submit" class="w-full px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-zinc-950 rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg">
+            Send Message
+          </button>
+        </form>
+        
+        <div class="mt-12 flex flex-col items-center gap-4 text-var-dim">
+            <a href="mailto:contact@carlsonsolutionsmn.com" class="hover:text-cyan-400 transition-colors">contact@carlsonsolutionsmn.com</a>
+            <p>(651) 348-0615</p>
+            <div class="flex gap-6 mt-4">
+                <a href="https://www.linkedin.com/company/carlson-solutions-mn/" target="_blank" class="text-xl hover:text-cyan-400"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/p/Carlson-Solutions-LLC-61576075333873/" target="_blank" class="text-xl hover:text-cyan-400"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-xl hover:text-cyan-400"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 bg-var-bg border-t border-var-border text-center">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-var-dim text-[10px] font-black uppercase tracking-[0.2em]">
+          &copy; <span id="year"></span> Carlson Solutions LLC. All rights reserved.
+        </p>
+        <div class="flex gap-6 text-[10px] font-black uppercase tracking-widest text-var-dim">
+            <a href="/assets/privacy-policy.pdf" target="_blank" class="hover:text-cyan-400">Privacy Policy</a>
+            <a href="/assets/terms-of-service.pdf" target="_blank" class="hover:text-cyan-400">Terms of Service</a>
+            <a href="/assets/data-protection.pdf" target="_blank" class="hover:text-cyan-400">Data Protection</a>
+        </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme Toggle Logic
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light') enableLight();
+
+    themeBtn.addEventListener('click', () => {
+      body.classList.contains('light-mode') ? enableDark() : enableLight();
+    });
+
+    function enableLight() {
+      body.classList.add('light-mode');
+      themeIcon.className = 'fas fa-moon';
+      localStorage.setItem('theme', 'light');
+    }
+
+    function enableDark() {
+      body.classList.remove('light-mode');
+      themeIcon.className = 'fas fa-sun';
+      localStorage.setItem('theme', 'dark');
+    }
+
+    // Carousel Logic
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.getElementById('prev-slide');
+    const nextBtn = document.getElementById('next-slide');
+    const dotsContainer = document.getElementById('carousel-dots');
+    let currentSlide = 0;
+    let autoPlayInterval;
+
+    if(slides.length > 0) {
+      slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = `w-2 h-2 rounded-full cursor-pointer transition-all ${i === 0 ? 'bg-cyan-400 w-6' : 'bg-var-border'}`;
+        dot.addEventListener('click', () => { stopAutoPlay(); goToSlide(i); });
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = dotsContainer.querySelectorAll('div');
+
+      function goToSlide(n) {
+        slides[currentSlide].classList.remove('active-slide');
+        slides[currentSlide].style.opacity = 0;
+        dots[currentSlide].className = 'w-2 h-2 rounded-full bg-var-border cursor-pointer transition-all';
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active-slide');
+        slides[currentSlide].style.opacity = 1;
+        dots[currentSlide].className = 'w-2 h-2 rounded-full bg-cyan-400 w-6 cursor-pointer transition-all';
+      }
+
+      function nextSlide() { goToSlide(currentSlide + 1); }
+      function startAutoPlay() { autoPlayInterval = setInterval(nextSlide, 5000); }
+      function stopAutoPlay() { clearInterval(autoPlayInterval); }
+
+      nextBtn.addEventListener('click', () => { stopAutoPlay(); nextSlide(); });
+      prevBtn.addEventListener('click', () => { stopAutoPlay(); goToSlide(currentSlide - 1); });
+
+      slides[0].style.opacity = 1;
+      startAutoPlay();
+    }
+
+    // Scroll Header
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      header.style.background = window.scrollY > 50 ? 'var(--var-card)' : 'transparent';
+    });
+
+    // Mobile Menu
+    const mobileTrigger = document.getElementById('mobile-bars-trigger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileTrigger.onclick = () => mobileMenu.style.display = 'flex';
+    document.getElementById('close-mobile').onclick = () => mobileMenu.style.display = 'none';
+  </script>
 </body>
 </html>
