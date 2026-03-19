@@ -125,6 +125,24 @@ header {
 }
 
 /* Testimonial Carousel */
+.carousel-nav-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--var-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--var-main);
+  flex-shrink: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-nav-btn:hover {
+  background-color: rgb(34 211 238);
+  color: rgb(9 9 11);
+}
+
 #carousel-track {
   display: flex;
   align-items: center;

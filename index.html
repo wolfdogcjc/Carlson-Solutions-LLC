@@ -184,7 +184,7 @@
           <p class="text-var-dim uppercase tracking-widest text-xs font-black">100% 5-Star Rated Service</p>
         </div>
 
-        <div class="relative max-w-4xl mx-auto">
+        <div class="max-w-4xl mx-auto">
           <div id="carousel-track" class="relative h-[550px] md:h-[350px] overflow-hidden">
             
             <div class="testimonial-slide absolute inset-0 opacity-0 transition-opacity duration-700 flex flex-col items-center text-center px-12 active-slide">
@@ -248,14 +248,15 @@
             </div>
           </div>
 
-          <button id="prev-slide" class="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 w-12 h-12 rounded-full border border-var-border flex items-center justify-center text-var-main hover:bg-cyan-400 hover:text-zinc-950 transition-all z-20">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button id="next-slide" class="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 w-12 h-12 rounded-full border border-var-border flex items-center justify-center text-var-main hover:bg-cyan-400 hover:text-zinc-950 transition-all z-20">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-
-          <div id="carousel-dots" class="flex justify-center gap-3 mt-8"></div>
+          <div class="flex items-center justify-center gap-4 mt-8">
+            <button id="prev-slide" class="carousel-nav-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div id="carousel-dots" class="flex items-center gap-3"></div>
+            <button id="next-slide" class="carousel-nav-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
 
         <div class="mt-20 max-w-xl mx-auto p-12 rounded-[3rem] bg-var-card border border-var-border text-center">
@@ -397,7 +398,7 @@
     if(slides.length > 0) {
       slides.forEach((_, i) => {
         const dot = document.createElement('div');
-        dot.className = `w-2 h-2 rounded-full cursor-pointer transition-all ${i === 0 ? 'bg-cyan-400 w-6' : 'bg-var-border'}`;
+        dot.className = `w-2 h-2 rounded-full cursor-pointer transition-all ${i === 0 ? 'bg-cyan-400 w-6' : 'bg-zinc-500'}`;
         dot.addEventListener('click', () => { stopAutoPlay(); goToSlide(i); });
         dotsContainer.appendChild(dot);
       });
@@ -407,7 +408,7 @@
       function goToSlide(n) {
         slides[currentSlide].classList.remove('active-slide');
         slides[currentSlide].style.opacity = 0;
-        dots[currentSlide].className = 'w-2 h-2 rounded-full bg-var-border cursor-pointer transition-all';
+        dots[currentSlide].className = 'w-2 h-2 rounded-full bg-zinc-500 cursor-pointer transition-all';
         currentSlide = (n + slides.length) % slides.length;
         slides[currentSlide].classList.add('active-slide');
         slides[currentSlide].style.opacity = 1;
