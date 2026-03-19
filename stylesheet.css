@@ -190,8 +190,21 @@ header {
   transform: scale(1.05);
 }
 
+/* Section Boxes */
+.section-box {
+  background: var(--var-card);
+  border: 1px solid var(--var-border);
+  border-radius: 2rem;
+  padding: 3rem;
+}
+
 /* Responsive Overrides */
 @media (max-width: 768px) {
+  .section-box {
+    border-radius: 1.25rem;
+    padding: 2rem 1.25rem;
+  }
+
   .testimonial-slide p {
     font-size: 1rem;
     padding: 0 10px;
