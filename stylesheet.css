@@ -190,54 +190,21 @@ header {
   transform: scale(1.05);
 }
 
-/* --- Modern Scrollbar --- */
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(var(--cyan-accent), 0.4) transparent;
-}
-
-/* WebKit / Chromium */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(var(--cyan-accent), 0.35);
-  border-radius: 99px;
-  transition: background 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(var(--cyan-accent), 0.7);
-  box-shadow: 0 0 8px rgba(var(--cyan-accent), 0.4);
-}
-
-/* Light-mode scrollbar */
-body.light-mode {
-  scrollbar-color: rgba(var(--cyan-accent), 0.5) #e2e8f0;
-}
-
-body.light-mode ::-webkit-scrollbar-track {
-  background: #e2e8f0;
-}
-
-body.light-mode ::-webkit-scrollbar-thumb {
-  background: rgba(var(--cyan-accent), 0.5);
-}
-
-body.light-mode ::-webkit-scrollbar-thumb:hover {
-  background: rgba(var(--cyan-accent), 0.8);
+/* Section Boxes */
+.section-box {
+  background: var(--var-card);
+  border: 1px solid var(--var-border);
+  border-radius: 2rem;
+  padding: 3rem;
 }
 
 /* Responsive Overrides */
 @media (max-width: 768px) {
+  .section-box {
+    border-radius: 1.25rem;
+    padding: 2rem 1.25rem;
+  }
+
   .testimonial-slide p {
     font-size: 1rem;
     padding: 0 10px;
