@@ -71,21 +71,24 @@ header {
 }
 
 .hero-bg {
-  background: radial-gradient(circle at top, rgba(var(--cyan-accent), 0.08) 0%, transparent 70%);
+  background:
+    linear-gradient(rgba(var(--cyan-accent), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--cyan-accent), 0.04) 1px, transparent 1px),
+    radial-gradient(circle at top, rgba(var(--cyan-accent), 0.07) 0%, transparent 65%);
+  background-size: 48px 48px, 48px 48px, 100% 100%;
 }
 
 /* Service Cards */
 .project-card {
   background: var(--var-card);
   border: 1px solid var(--var-border);
-  border-radius: 2.5rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
   border-color: rgba(var(--cyan-accent), 0.5);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
 }
 
 .service-icon-box {
@@ -93,7 +96,7 @@ header {
   height: 56px;
   background: var(--var-bg);
   border: 1px solid var(--var-border);
-  border-radius: 1.25rem;
+  border-radius: 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,7 +116,7 @@ header {
   padding: 4px 12px;
   background: rgba(var(--cyan-accent), 0.1);
   color: rgb(var(--cyan-accent));
-  border-radius: 99px;
+  border-radius: 0.25rem;
   border: 1px solid rgba(var(--cyan-accent), 0.2);
 }
 
@@ -175,7 +178,7 @@ header {
   width: 100%;
   background: var(--var-card);
   border: 1px solid var(--var-border);
-  border-radius: 14px;
+  border-radius: 0.25rem;
   padding: 1.1rem;
   color: var(--var-main);
   font-size: 0.9rem;
@@ -212,14 +215,14 @@ header {
 .section-box {
   background: var(--var-card);
   border: 1px solid var(--var-border);
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   padding: 3rem;
 }
 
 /* Responsive Overrides */
 @media (max-width: 768px) {
   .section-box {
-    border-radius: 1.25rem;
+    border-radius: 0.5rem;
     padding: 2rem 1.25rem;
   }
 
@@ -229,7 +232,7 @@ header {
   }
   
   .project-card {
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
   }
 
   h1 span {
