@@ -43,6 +43,7 @@ h1 {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 h1 span {
@@ -71,24 +72,21 @@ header {
 }
 
 .hero-bg {
-  background:
-    linear-gradient(rgba(var(--cyan-accent), 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(var(--cyan-accent), 0.04) 1px, transparent 1px),
-    radial-gradient(circle at top, rgba(var(--cyan-accent), 0.07) 0%, transparent 65%);
-  background-size: 48px 48px, 48px 48px, 100% 100%;
+  background: radial-gradient(circle at top, rgba(var(--cyan-accent), 0.08) 0%, transparent 70%);
 }
 
 /* Service Cards */
 .project-card {
   background: var(--var-card);
   border: 1px solid var(--var-border);
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  border-radius: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-card:hover {
+  transform: translateY(-8px);
   border-color: rgba(var(--cyan-accent), 0.5);
-  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon-box {
@@ -96,7 +94,7 @@ header {
   height: 56px;
   background: var(--var-bg);
   border: 1px solid var(--var-border);
-  border-radius: 0.25rem;
+  border-radius: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +114,7 @@ header {
   padding: 4px 12px;
   background: rgba(var(--cyan-accent), 0.1);
   color: rgb(var(--cyan-accent));
-  border-radius: 0.25rem;
+  border-radius: 99px;
   border: 1px solid rgba(var(--cyan-accent), 0.2);
 }
 
@@ -128,24 +126,6 @@ header {
 }
 
 /* Testimonial Carousel */
-.carousel-nav-btn {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 9999px;
-  border: 1px solid var(--var-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--var-main);
-  flex-shrink: 0;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.carousel-nav-btn:hover {
-  background-color: rgb(34 211 238);
-  color: rgb(9 9 11);
-}
-
 #carousel-track {
   display: flex;
   align-items: center;
@@ -178,7 +158,7 @@ header {
   width: 100%;
   background: var(--var-card);
   border: 1px solid var(--var-border);
-  border-radius: 0.25rem;
+  border-radius: 14px;
   padding: 1.1rem;
   color: var(--var-main);
   font-size: 0.9rem;
@@ -211,28 +191,15 @@ header {
   transform: scale(1.05);
 }
 
-/* Section Boxes */
-.section-box {
-  background: var(--var-card);
-  border: 1px solid var(--var-border);
-  border-radius: 0.5rem;
-  padding: 3rem;
-}
-
 /* Responsive Overrides */
 @media (max-width: 768px) {
-  .section-box {
-    border-radius: 0.5rem;
-    padding: 2rem 1.25rem;
-  }
-
   .testimonial-slide p {
     font-size: 1rem;
     padding: 0 10px;
   }
   
   .project-card {
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
   }
 
   h1 span {
