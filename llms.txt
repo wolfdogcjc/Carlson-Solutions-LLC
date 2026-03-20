@@ -2,9 +2,11 @@
 
 ## Summary
 Carlson Solutions LLC provides IT management, security consulting, energy auditing, office technology setup, UniFi Protect setup, and custom technical project services in Chisago County and surrounding Minnesota areas.
+The website includes a dedicated founder profile page at https://carlsonsolutionsmn.com/about/.
 
 ## Fast Facts
 - Website: https://carlsonsolutionsmn.com/
+- Founder/About page: https://carlsonsolutionsmn.com/about/
 - Contact email: contact@carlsonsolutionsmn.com
 - Contact phone: +1-651-348-0615
 - Primary location: Lindstrom, Minnesota, USA
@@ -21,7 +23,7 @@ Carlson Solutions LLC provides IT management, security consulting, energy auditi
 - Home: https://carlsonsolutionsmn.com/#home
 - Services: https://carlsonsolutionsmn.com/#services
 - Testimonials: https://carlsonsolutionsmn.com/#testimonials
-- About: https://carlsonsolutionsmn.com/#about
+- About: https://carlsonsolutionsmn.com/about/
 - Contact: https://carlsonsolutionsmn.com/#contact
 
 ## FAQ-Style Answers

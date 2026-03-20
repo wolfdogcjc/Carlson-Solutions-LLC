@@ -34,6 +34,30 @@ body {
   overflow-x: hidden;
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+  width: auto;
+  height: auto;
+  z-index: 200;
+  background: rgb(var(--cyan-accent));
+  color: #020617;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
 .heading-font { 
   font-family: 'Space Grotesk', sans-serif; 
 }
@@ -262,6 +286,38 @@ body.light-mode .text-cyan-500 {
 .header-quote-btn:hover {
   background: rgb(var(--cyan-accent));
   color: #020617;
+}
+
+.hero-quote-btn {
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.hero-quote-btn:hover,
+.hero-quote-btn:focus-visible {
+  border-color: rgb(var(--cyan-accent));
+  background: rgb(var(--cyan-accent));
+  color: #020617;
+  box-shadow: none;
+  transform: none;
+}
+
+body.light-mode .hero-quote-btn:hover,
+body.light-mode .hero-quote-btn:focus-visible {
+  background: #0284c7;
+  border-color: #0284c7;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-quote-btn {
+    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .hero-quote-btn:hover,
+  .hero-quote-btn:focus-visible {
+    transform: none;
+  }
 }
 
 /* Section Boxes */
