@@ -28,12 +28,12 @@ This page defines the visual identity standards for Carlson Solutions LLC to ens
 
 | Name | Value | CSS Variable | Usage |
 |---|---|---|---|
-| Background | `#FFFFFF` | `--var-bg` | Page background |
-| Surface | `#F8FAFC` | `--var-card` | Card backgrounds |
-| Border | `#CBD5E1` | `--var-border` | Card and divider borders |
-| Primary Text | `#0F172A` | `--var-main` | All primary text and headings |
+| Background | `#F8FBFF` | `--var-bg` | Page background |
+| Surface | `#FFFFFF` | `--var-card` | Card backgrounds |
+| Border | `#CFD8E3` | `--var-border` | Card and divider borders |
+| Primary Text | `#0B1220` | `--var-main` | All primary text and headings |
 | Secondary Text | `#334155` | `--var-dim` | Subheadings, meta text, labels |
-| Text (Buttons) | `#020617` | `--var-text-main` | Filled button label text |
+| Text (Buttons) | `#0B1220` | `--var-text-main` | Filled button label text |
 
 ---
 
@@ -123,10 +123,12 @@ All icons are sourced from **Font Awesome 6 Free** (Solid style, `fas` class pre
 
 | Icon | Class | Context |
 |---|---|---|
-| IT Management | `fa-laptop-code` | Service card |
-| Security | `fa-shield-halved` | Service card / hero |
-| Energy | `fa-bolt` | Service card / hero |
-| UniFi Protect | `fa-camera` | Service card |
+| IT Management | `fa-server` | Service card |
+| Security | `fa-user-shield` | Service card / hero |
+| Energy | `fa-bolt-lightning` | Service card / hero |
+| Office Tech Setup | `fa-laptop` | Service card |
+| UniFi Protect | `fa-video` | Service card |
+| Custom Requests | `fa-screwdriver-wrench` | Service card |
 | Theme toggle (sun) | `fa-sun` | Light/dark toggle button |
 | Theme toggle (moon) | `fa-moon` | Light/dark toggle button |
 | External arrow | `fa-arrow-right` | CTA buttons |
