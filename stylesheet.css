@@ -851,23 +851,6 @@ body.light-mode .project-init-btn {
     font-size: 1.7rem;
   }
 
-  footer .max-w-7xl > div > div:last-child a[href^="mailto:"] {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.2rem;
-    height: 2.2rem;
-    font-size: 0;
-    border-radius: 9999px;
-    border: 1px solid rgba(var(--cyan-accent), 0.45);
-    color: var(--var-dim);
-  }
-
-  footer .max-w-7xl > div > div:last-child a[href^="mailto:"]::before {
-    content: "✉";
-    font-size: 1.15rem;
-    line-height: 1;
-  }
 
   #mobile-menu a[href="#contact"],
   #mobile-menu a[href="/#contact"] {
@@ -933,15 +916,6 @@ body.light-mode .project-init-btn {
 
   footer .max-w-7xl > div > div:last-child a i {
     font-size: 1.95rem;
-  }
-
-  footer .max-w-7xl > div > div:last-child a[href^="mailto:"] {
-    width: 2.45rem;
-    height: 2.45rem;
-  }
-
-  footer .max-w-7xl > div > div:last-child a[href^="mailto:"]::before {
-    font-size: 1.35rem;
   }
 
   #mobile-menu a[href="#contact"],
