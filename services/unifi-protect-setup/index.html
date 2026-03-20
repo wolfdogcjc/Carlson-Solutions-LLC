@@ -70,27 +70,6 @@
       <p class="text-var-dim text-lg leading-relaxed max-w-3xl">End-to-end deployment for UniFi camera and NVR environments designed for reliable visibility and practical day-to-day use.</p>
     </section>
 
-    <section class="max-w-5xl mx-auto px-8 mb-10">
-      <div class="service-carousel" data-service-carousel>
-        <div class="service-carousel-track">
-          <div class="service-slide active">
-            <div class="w-full h-full flex items-center justify-center" style="background: linear-gradient(135deg, #0f172a, #155e75);"><span class="text-white font-bold uppercase tracking-widest text-sm">Image Placeholder 1</span></div>
-            <div class="service-carousel-caption">Camera Placement and Coverage Mapping</div>
-          </div>
-          <div class="service-slide">
-            <div class="w-full h-full flex items-center justify-center" style="background: linear-gradient(135deg, #111827, #065f46);"><span class="text-white font-bold uppercase tracking-widest text-sm">Image Placeholder 2</span></div>
-            <div class="service-carousel-caption">NVR Provisioning and Storage Configuration</div>
-          </div>
-          <div class="service-slide">
-            <div class="w-full h-full flex items-center justify-center" style="background: linear-gradient(135deg, #0c4a6e, #1e3a8a);"><span class="text-white font-bold uppercase tracking-widest text-sm">Image Placeholder 3</span></div>
-            <div class="service-carousel-caption">Alert Rules and Remote Access Validation</div>
-          </div>
-        </div>
-        <button type="button" class="service-carousel-nav prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
-        <button type="button" class="service-carousel-nav next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </section>
-
     <section class="max-w-5xl mx-auto px-8 mb-12">
       <div class="bg-var-card border border-var-border rounded-lg p-8 md:p-10">
         <h2 class="heading-font text-2xl font-bold text-var-main mb-5">Protect Deployment Scope</h2>
@@ -148,22 +127,6 @@
     document.getElementById('close-mobile').onclick = () => mobileMenu.style.display = 'none';
     mobileServicesToggle.addEventListener('click', () => { mobileServicesList.classList.toggle('hidden'); mobileServicesChevron.classList.toggle('rotate-180'); });
     mobileNavLinks.forEach((link) => link.addEventListener('click', () => { mobileMenu.style.display = 'none'; }));
-
-    const serviceCarousel = document.querySelector('[data-service-carousel]');
-    if (serviceCarousel) {
-      const slides = serviceCarousel.querySelectorAll('.service-slide');
-      const prev = serviceCarousel.querySelector('.service-carousel-nav.prev');
-      const next = serviceCarousel.querySelector('.service-carousel-nav.next');
-      let current = 0;
-      const showSlide = (index) => {
-        slides[current].classList.remove('active');
-        current = (index + slides.length) % slides.length;
-        slides[current].classList.add('active');
-      };
-      prev.addEventListener('click', () => showSlide(current - 1));
-      next.addEventListener('click', () => showSlide(current + 1));
-      setInterval(() => showSlide(current + 1), 5500);
-    }
 
     const contactForm = document.getElementById('contact-form');
     const contactSuccess = document.getElementById('contact-success');
