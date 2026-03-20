@@ -12,12 +12,12 @@
 
 /* High-Contrast Light Mode */
 body.light-mode {
-  --var-bg: #ffffff;
-  --var-card: #f8fafc;
-  --var-border: #cbd5e1;
-  --var-main: #0f172a; 
-  --var-dim: #334155;  
-  --var-text-main: #020617;
+  --var-bg: #f8fbff;
+  --var-card: #ffffff;
+  --var-border: #cfd8e3;
+  --var-main: #0b1220;
+  --var-dim: #334155;
+  --var-text-main: #0b1220;
 }
 
 * {
@@ -36,6 +36,27 @@ body {
 
 .heading-font { 
   font-family: 'Space Grotesk', sans-serif; 
+}
+
+.hero-title-main {
+  line-height: 1;
+}
+
+.hero-solutions-wrap {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.55em;
+}
+
+.hero-llc {
+  position: absolute;
+  right: -0.42em;
+  bottom: -0.1em;
+  font-size: 0.22em;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.9;
 }
 
 /* Typography Balance */
@@ -78,6 +99,14 @@ header {
   background-size: 48px 48px, 48px 48px, 100% 100%;
 }
 
+body.light-mode .hero-bg {
+  background:
+    linear-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at top, rgba(2, 132, 199, 0.1) 0%, transparent 68%);
+  background-size: 48px 48px, 48px 48px, 100% 100%;
+}
+
 /* Service Cards */
 .project-card {
   background: var(--var-card);
@@ -89,6 +118,10 @@ header {
 .project-card:hover {
   border-color: rgba(var(--cyan-accent), 0.5);
   box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .project-card:hover {
+  box-shadow: 0 10px 28px -14px rgba(2, 6, 23, 0.35);
 }
 
 .service-icon-box {
@@ -118,6 +151,16 @@ header {
   color: rgb(var(--cyan-accent));
   border-radius: 0.25rem;
   border: 1px solid rgba(var(--cyan-accent), 0.2);
+}
+
+body.light-mode .skill-bubble {
+  background: #e0f2fe;
+  color: #075985;
+  border-color: #7dd3fc;
+}
+
+body.light-mode .text-cyan-500 {
+  color: #0284c7 !important;
 }
 
 .glow-bar {
@@ -211,6 +254,16 @@ header {
   transform: scale(1.05);
 }
 
+.header-quote-btn {
+  background: var(--var-text-main);
+  color: var(--var-bg);
+}
+
+.header-quote-btn:hover {
+  background: rgb(var(--cyan-accent));
+  color: #020617;
+}
+
 /* Section Boxes */
 .section-box {
   background: var(--var-card);
@@ -219,8 +272,137 @@ header {
   padding: 3rem;
 }
 
+/* About Timeline Points */
+.about-points {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-point {
+  border-left: 3px solid rgba(var(--cyan-accent), 0.25);
+  padding: 0.25rem 0 0.25rem 1rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.about-point:hover {
+  border-left-color: rgba(var(--cyan-accent), 0.95);
+  background: rgba(var(--cyan-accent), 0.06);
+}
+
+body.light-mode .about-point {
+  border-left-color: rgba(2, 132, 199, 0.4);
+}
+
+body.light-mode .about-point:hover {
+  border-left-color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+}
+
+.project-init-btn {
+  background: var(--var-main);
+  color: var(--var-bg);
+}
+
+.project-init-btn:hover {
+  background: rgb(var(--cyan-accent));
+  color: #020617;
+}
+
+body.light-mode .project-init-btn {
+  border: 1px solid #cbd5e1;
+}
+
 /* Responsive Overrides */
 @media (max-width: 768px) {
+  #main-header .max-w-7xl {
+    padding: 0.9rem 1rem;
+  }
+
+  #main-header .heading-font {
+    font-size: 1rem;
+  }
+
+  #home {
+    padding-top: 8.5rem;
+    padding-bottom: 4rem;
+  }
+
+  #home h1 {
+    font-size: 2.6rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-solutions-wrap {
+    padding-right: 0.52em;
+  }
+
+  .hero-llc {
+    right: -0.38em;
+    bottom: -0.08em;
+    font-size: 0.23em;
+  }
+
+  #home p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  #services,
+  #testimonials,
+  #about,
+  #contact {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  #services .px-8,
+  #testimonials .px-8,
+  #about .px-8,
+  #contact .px-8,
+  footer .px-8 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  #carousel-track {
+    height: 360px;
+  }
+
+  .testimonial-slide > p {
+    font-size: 1rem;
+    line-height: 1.65;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-slide > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .testimonial-slide > div > a {
+    font-size: 10px;
+    line-height: 1.45;
+    white-space: normal;
+  }
+
+  #testimonials .mt-24 {
+    margin-top: 4rem;
+  }
+
+  #about .bg-var-card,
+  #contact form,
+  #contact #contact-success {
+    padding: 1.5rem;
+  }
+
+  #about .grid,
+  #contact .grid {
+    gap: 1.25rem;
+  }
+
   .section-box {
     border-radius: 0.5rem;
     padding: 2rem 1.25rem;
@@ -237,5 +419,93 @@ header {
 
   h1 span {
     font-size: 1.75rem; /* Better scaling for mobile headings */
+  }
+}
+
+@media (max-width: 420px) {
+  #main-header .max-w-7xl {
+    padding: 0.75rem 0.85rem;
+  }
+
+  #home {
+    padding-top: 7.6rem;
+    padding-bottom: 3.25rem;
+  }
+
+  #home h1 {
+    font-size: 2.15rem;
+  }
+
+  .hero-solutions-wrap {
+    padding-right: 0.48em;
+  }
+
+  .hero-llc {
+    right: -0.34em;
+    bottom: -0.07em;
+    font-size: 0.24em;
+  }
+
+  #home .inline-flex {
+    margin-bottom: 1.5rem;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  #services,
+  #testimonials,
+  #about,
+  #contact {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+
+  #services .px-8,
+  #testimonials .px-8,
+  #about .px-8,
+  #contact .px-8,
+  footer .px-8 {
+    padding-left: 0.95rem;
+    padding-right: 0.95rem;
+  }
+
+  #carousel-track {
+    height: 400px;
+  }
+
+  .testimonial-slide > p {
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  .testimonial-slide > div > a {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  #testimonials .absolute.-bottom-5 {
+    width: calc(100% - 2rem);
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  #contact .text-center.mb-12 {
+    margin-bottom: 1.75rem;
+  }
+
+  #contact .mt-16 {
+    margin-top: 2.5rem;
+  }
+
+  #about .bg-var-card,
+  #contact form,
+  #contact #contact-success,
+  #testimonials .max-w-4xl,
+  #testimonials .max-w-3xl {
+    padding: 1.15rem;
+  }
+
+  #mobile-menu .mobile-link {
+    font-size: 1.45rem;
   }
 }

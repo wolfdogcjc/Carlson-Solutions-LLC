@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carlson Solutions LLC | IT Management &amp; Engineering Consulting</title>
   <meta name="description" content="Expert IT management, security consulting, and energy auditing for homes and businesses in Chisago County and beyond.">
+  <meta name="keywords" content="IT management, managed IT services, network consulting, UniFi provisioning, UniFi Protect setup, cybersecurity consulting, physical security audit, vulnerability testing, office technology setup, server administration, infrastructure consulting, energy auditing, building efficiency, Chisago County IT services, Lindstrom IT support, Minnesota IT consulting, small business IT support, home office networking, Carlson Solutions LLC">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Carlson Solutions LLC">
+  <meta name="theme-color" content="#06b6d4">
+  <link rel="alternate" hreflang="en-us" href="https://carlsonsolutionsmn.com/">
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="https://carlsonsolutionsmn.com/" />
@@ -117,6 +123,70 @@
   }
   </script>
 
+  <!-- Schema Markup: WebPage + Section Deep Links -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Carlson Solutions LLC",
+    "url": "https://carlsonsolutionsmn.com/",
+    "description": "IT management, security consulting, and energy auditing for homes and businesses in Chisago County and surrounding Minnesota communities.",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Carlson Solutions LLC",
+      "url": "https://carlsonsolutionsmn.com/"
+    },
+    "hasPart": [
+      {
+        "@type": "WebPageElement",
+        "name": "Home",
+        "url": "https://carlsonsolutionsmn.com/#home",
+        "description": "Overview of Carlson Solutions LLC services, including IT management, security consulting, and energy auditing."
+      },
+      {
+        "@type": "WebPageElement",
+        "name": "Services",
+        "url": "https://carlsonsolutionsmn.com/#services",
+        "description": "Professional services for IT management, security auditing, office technology setup, and infrastructure optimization."
+      },
+      {
+        "@type": "WebPageElement",
+        "name": "Client Testimonials",
+        "url": "https://carlsonsolutionsmn.com/#testimonials",
+        "description": "Verified customer review excerpts covering project outcomes and service quality from local clients."
+      },
+      {
+        "@type": "WebPageElement",
+        "name": "About",
+        "url": "https://carlsonsolutionsmn.com/#about",
+        "description": "Technical approach and project methodology focused on configuration logic and operational efficiency."
+      },
+      {
+        "@type": "WebPageElement",
+        "name": "Contact",
+        "url": "https://carlsonsolutionsmn.com/#contact",
+        "description": "Contact form, email, and phone details for quote requests and project assessments."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema Markup: WebSite Navigation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Carlson Solutions LLC",
+    "url": "https://carlsonsolutionsmn.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://carlsonsolutionsmn.com/#home",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,12 +197,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="stylesheet.css">
   <style>
-    .bg-var-card { background-color: #020617; }
-    .text-var-main { color: #e5e7eb; }
-    .border-var-border { border-color: #27272a; }
-    .text-var-dim { color: #9ca3af; }
-    .text-var-bg { color: #020617; }
-    .bg-var-text-main { background-color: #e5e7eb; }
+    .bg-var-card { background-color: var(--var-card); }
+    .text-var-main { color: var(--var-main); }
+    .border-var-border { border-color: var(--var-border); }
+    .text-var-dim { color: var(--var-dim); }
+    .text-var-bg { color: var(--var-bg); }
+    .bg-var-text-main { background-color: var(--var-text-main); }
   </style>
 </head>
 <body class="antialiased selection:bg-cyan-500/30">
@@ -167,7 +237,7 @@
         <div id="mobile-bars-trigger" class="md:hidden p-2 text-var-main cursor-pointer text-xl">
           <i class="fas fa-bars"></i>
         </div>
-        <a href="#contact" class="hidden sm:flex px-6 py-2.5 bg-var-text-main text-var-bg rounded-md font-bold text-xs uppercase tracking-widest hover:bg-zinc-700 transition-all items-center gap-2">
+        <a href="#contact" class="header-quote-btn hidden sm:flex px-6 py-2.5 rounded-md font-bold text-xs uppercase tracking-widest transition-all items-center gap-2">
           Request Quote <i class="fas fa-arrow-right text-sm"></i>
         </a>
       </div>
@@ -183,8 +253,8 @@
           Serving Chisago County &amp; Beyond
         </div>
 
-        <h1 class="heading-font text-6xl md:text-8xl font-bold tracking-tight mb-6 text-var-main leading-none">
-          Carlson Solutions LLC.
+        <h1 class="heading-font text-6xl md:text-8xl font-bold tracking-tight mb-6 text-var-main leading-none hero-title-main">
+          Carlson <span class="hero-solutions-wrap">Solutions<span class="hero-llc">LLC</span></span>
         </h1>
         <p class="text-var-dim text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
           Expert IT management, security consulting, and energy auditing for your home or business infrastructure.
@@ -288,22 +358,30 @@
               <span class="skill-bubble">Protect OS</span>
             </div>
           </div>
+
+          <div class="project-card p-8 flex flex-col">
+            <div class="service-icon-box mb-6">
+              <i class="fas fa-screwdriver-wrench text-xl text-var-main"></i>
+            </div>
+            <h3 class="text-xl font-bold text-var-main mb-3">Custom Project Requests</h3>
+            <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
+              Need something beyond our listed services? We can scope and deliver custom technical solutions tailored to your infrastructure and goals.
+            </p>
+            <a href="#contact" class="mt-auto inline-flex items-center gap-2 text-cyan-500 font-bold uppercase tracking-widest text-xs hover:text-cyan-400 transition-colors">
+              Start a Custom Request
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="testimonials" class="py-24 bg-var-card border-y border-var-border relative">
       <div class="max-w-7xl mx-auto px-8">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-var-border pb-6">
+        <div class="text-center mb-12 border-b border-var-border pb-6">
           <div>
             <h2 class="heading-font text-3xl font-bold text-var-main mb-2">Client Testimonials</h2>
             <p class="text-var-dim uppercase tracking-widest text-xs font-bold">Performance History</p>
-          </div>
-          <div class="flex items-center gap-3 mt-4 md:mt-0">
-            <div class="flex text-cyan-500 text-sm">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <span class="text-var-main font-bold text-sm tracking-widest uppercase">100% 5-Star</span>
           </div>
         </div>
 
@@ -315,9 +393,14 @@
                 "Caleb's maturity, analytical approach, and great questions enabled him to customize a perfect set up for me in one weekend. I went from nothing to everything in 2 days. He is extremely industrious and skillful."
               </p>
               <div class="flex items-center justify-between border-t border-var-border pt-4">
-                <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">Christa H.</h4>
+                <div class="flex items-center gap-3">
+                  <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">Christa H.</h4>
+                  <div class="flex text-cyan-500 text-[10px]" aria-label="5-star rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
                 <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" rel="noopener noreferrer" class="text-[10px] text-var-dim hover:text-cyan-500 uppercase tracking-widest transition-colors">
-                  View Full Report <i class="fas fa-external-link-alt ml-1"></i>
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
                 </a>
               </div>
             </div>
@@ -327,9 +410,14 @@
                 "As an older single lady, the help Caleb offers is priceless! He is a young man of high integrity, mature, and gifted. He typed up extremely understandable 'Dee-structions' for me to refer to!"
               </p>
               <div class="flex items-center justify-between border-t border-var-border pt-4">
-                <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">Delaine R.</h4>
+                <div class="flex items-center gap-3">
+                  <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">Delaine R.</h4>
+                  <div class="flex text-cyan-500 text-[10px]" aria-label="5-star rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
                 <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" rel="noopener noreferrer" class="text-[10px] text-var-dim hover:text-cyan-500 uppercase tracking-widest transition-colors">
-                  View Full Report <i class="fas fa-external-link-alt ml-1"></i>
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
                 </a>
               </div>
             </div>
@@ -339,9 +427,14 @@
                 "Carlson Solutions updated my entire business system. The technician was sharp, dependable, and brought my database up to speed. Highly recommended for any business hardware or software needs."
               </p>
               <div class="flex items-center justify-between border-t border-var-border pt-4">
-                <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">Norm B.</h4>
+                <div class="flex items-center gap-3">
+                  <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">Norm B.</h4>
+                  <div class="flex text-cyan-500 text-[10px]" aria-label="5-star rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
                 <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" rel="noopener noreferrer" class="text-[10px] text-var-dim hover:text-cyan-500 uppercase tracking-widest transition-colors">
-                  View Full Report <i class="fas fa-external-link-alt ml-1"></i>
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
                 </a>
               </div>
             </div>
@@ -351,9 +444,14 @@
                 "Fantastic job getting our TV mounted and security cameras installed efficiently and with amazing quality. I would definitely recommend Carlson Solutions LLC!"
               </p>
               <div class="flex items-center justify-between border-t border-var-border pt-4">
-                <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">McKenna P.</h4>
+                <div class="flex items-center gap-3">
+                  <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">McKenna P.</h4>
+                  <div class="flex text-cyan-500 text-[10px]" aria-label="5-star rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
                 <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" rel="noopener noreferrer" class="text-[10px] text-var-dim hover:text-cyan-500 uppercase tracking-widest transition-colors">
-                  View Full Report <i class="fas fa-external-link-alt ml-1"></i>
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
                 </a>
               </div>
             </div>
@@ -363,9 +461,14 @@
                 "Caleb did a wonderful job setting up internet at my house and nonprofit. He explained everything in good detail and his price is very fair. I'd recommend Carlson Solutions to anyone!"
               </p>
               <div class="flex items-center justify-between border-t border-var-border pt-4">
-                <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">Margaret K.</h4>
+                <div class="flex items-center gap-3">
+                  <h4 class="font-bold text-var-main text-sm uppercase tracking-wider">Margaret K.</h4>
+                  <div class="flex text-cyan-500 text-[10px]" aria-label="5-star rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
                 <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" rel="noopener noreferrer" class="text-[10px] text-var-dim hover:text-cyan-500 uppercase tracking-widest transition-colors">
-                  View Full Report <i class="fas fa-external-link-alt ml-1"></i>
+                  Excerpted from full customer review <i class="fas fa-external-link-alt ml-1"></i>
                 </a>
               </div>
             </div>
@@ -379,14 +482,19 @@
           </div>
         </div>
 
-        <div class="mt-24 max-w-2xl mx-auto border border-var-border bg-var-bg p-8 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 class="heading-font text-xl font-bold mb-1 text-var-main">Share Your Experience</h3>
-            <p class="text-var-dim text-sm">Your feedback helps us refine our infrastructure solutions.</p>
+        <div class="mt-24 max-w-3xl mx-auto border border-var-border bg-var-bg rounded-xl p-8 md:p-10 relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-cyan-500/10 blur-2xl pointer-events-none"></div>
+          <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.25em] font-bold text-cyan-500 mb-3">Client Feedback</p>
+              <h3 class="heading-font text-2xl md:text-3xl font-bold mb-2 text-var-main">Share Your Experience</h3>
+              <p class="text-var-dim text-sm md:text-base max-w-xl">Had a great outcome with Carlson Solutions LLC? Leave a Google review and help other homeowners and businesses choose with confidence.</p>
+            </div>
+            <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-3 px-6 py-3.5 bg-cyan-500 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs hover:bg-cyan-400 transition-colors group">
+              Leave a Google Review
+              <i class="fas fa-arrow-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </a>
           </div>
-          <a href="https://g.page/r/CW0czeTI0oIyEAE/review" target="_blank" rel="noopener noreferrer" class="shrink-0 px-6 py-3 bg-var-main text-var-bg rounded-md font-bold uppercase tracking-widest text-xs hover:bg-var-dim transition-colors group">
-            Review Firm <i class="fas fa-external-link-alt ml-2 group-hover:translate-x-1 transition-transform"></i>
-          </a>
         </div>
       </div>
     </section>
@@ -399,14 +507,12 @@
             <p class="text-var-dim text-base leading-relaxed mb-10">
               Based in Chisago County, we specialize in the logical configuration of your property. We bridge the gap between physical electrical installation and final system deployment, acting as the logic layer for your hardware.
             </p>
-            <div class="space-y-6 border-l border-var-border pl-6">
-              <div class="relative">
-                <div class="absolute -left-[25px] top-1.5 w-2 h-2 bg-cyan-500 rounded-sm"></div>
+            <div class="about-points">
+              <div class="about-point">
                 <h4 class="text-var-main font-bold text-lg mb-1">Configuration Only</h4>
                 <p class="text-var-dim text-sm">We don't pull wire—we program the processing logic of your existing infrastructure.</p>
               </div>
-              <div class="relative">
-                <div class="absolute -left-[25px] top-1.5 w-2 h-2 bg-cyan-500 rounded-sm"></div>
+              <div class="about-point">
                 <h4 class="text-var-main font-bold text-lg mb-1">Efficiency Experts</h4>
                 <p class="text-var-dim text-sm">Ensuring automated hardware systems operate strictly as intended to save operational costs.</p>
               </div>
@@ -418,7 +524,7 @@
             <p class="text-var-dim text-sm mb-8 leading-relaxed">
               Ready to have your equipment provisioned by a professional? We provide custom documentation and solutions tailored to your specific infrastructure topology.
             </p>
-            <a href="#contact" class="inline-flex w-full justify-center px-6 py-4 bg-var-main text-var-bg rounded-md font-bold text-xs uppercase tracking-widest hover:bg-zinc-300 transition-colors">
+            <a href="#contact" class="project-init-btn inline-flex w-full justify-center px-6 py-4 rounded-md font-bold text-xs uppercase tracking-widest transition-colors">
               Request Project Assessment
             </a>
           </div>
@@ -429,16 +535,17 @@
     <section id="contact" class="py-24 hero-bg">
       <div class="max-w-4xl mx-auto px-8">
         <div class="text-center mb-12">
-          <h2 class="heading-font text-3xl font-bold mb-4 text-var-main">Contact The Firm</h2>
+          <h2 class="heading-font text-3xl font-bold mb-4 text-var-main">Contact Us</h2>
           <p class="text-var-dim">Every engineering project is unique. Request a quote based on your specific security and networking topology.</p>
         </div>
         
-        <form class="space-y-6 bg-var-card border border-var-border p-8 rounded-lg shadow-sm">
+        <form id="contact-form" class="space-y-6 bg-var-card border border-var-border p-8 rounded-lg shadow-sm" action="https://formspree.io/f/mkoqyajo" method="POST" novalidate>
+          <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="grid md:grid-cols-2 gap-6">
-            <input type="text" class="input-field" placeholder="Full Name / Organization">
-            <input type="email" class="input-field" placeholder="Official Email Address">
+            <input type="text" name="name" class="input-field" placeholder="Full Name / Organization" required>
+            <input type="email" name="email" class="input-field" placeholder="Official Email Address" required>
           </div>
-          <select class="input-field appearance-none">
+          <select name="service" class="input-field appearance-none" required>
             <option value="" disabled selected>Select Core Service Needed</option>
             <option>IT Management &amp; Consulting</option>
             <option>Security Consulting &amp; Audit</option>
@@ -447,11 +554,18 @@
             <option>UniFi Protect Configuration</option>
             <option>Other / Custom Request</option>
           </select>
-          <textarea rows="5" class="input-field" placeholder="Describe your current infrastructure setup and requirements..."></textarea>
-          <button type="submit" class="w-full px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs transition-colors">
+          <textarea rows="5" name="message" class="input-field" placeholder="Describe your current infrastructure setup and requirements..." required></textarea>
+          <button id="contact-submit" type="submit" class="w-full px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs transition-colors">
             Submit Specifications
           </button>
+          <p id="contact-form-status" class="text-var-dim text-xs hidden" role="status" aria-live="polite"></p>
         </form>
+
+        <div id="contact-success" class="hidden bg-var-card border border-var-border p-8 rounded-lg shadow-sm text-center">
+          <p class="text-cyan-500 uppercase tracking-widest text-[11px] font-bold mb-3">Request Received</p>
+          <h3 class="heading-font text-2xl font-bold text-var-main mb-3">Thank You</h3>
+          <p class="text-var-dim leading-relaxed max-w-xl mx-auto">Thank you for submitting your quote request. We received your details and will reach out shortly to discuss your project.</p>
+        </div>
         
         <div class="mt-16 flex flex-col items-center gap-4 text-var-main font-semibold">
           <a href="mailto:contact@carlsonsolutionsmn.com" class="hover:text-cyan-500 transition-colors border-b border-var-border pb-1">contact@carlsonsolutionsmn.com</a>
@@ -553,7 +667,79 @@
     // Mobile Menu
     const mobileTrigger = document.getElementById('mobile-bars-trigger');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-link');
     mobileTrigger.onclick = () => mobileMenu.style.display = 'flex';
     document.getElementById('close-mobile').onclick = () => mobileMenu.style.display = 'none';
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+      });
+    });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const contactSuccess = document.getElementById('contact-success');
+    const submitButton = document.getElementById('contact-submit');
+    const formStatus = document.getElementById('contact-form-status');
+
+    if (contactForm && contactSuccess && submitButton && formStatus) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+          formStatus.textContent = 'Please complete all required fields before submitting.';
+          formStatus.classList.remove('hidden');
+          return;
+        }
+
+        const formData = new FormData(contactForm);
+        const payload = {
+          name: String(formData.get('name') || '').trim(),
+          email: String(formData.get('email') || '').trim(),
+          service: String(formData.get('service') || '').trim(),
+          message: String(formData.get('message') || '').trim(),
+          website: String(formData.get('website') || '').trim()
+        };
+
+        submitButton.disabled = true;
+        submitButton.classList.add('opacity-70', 'cursor-not-allowed');
+        formStatus.textContent = 'Submitting your request...';
+        formStatus.classList.remove('hidden');
+
+        const formspreeEndpoint = contactForm.getAttribute('action') || '';
+
+        if (!formspreeEndpoint || formspreeEndpoint.includes('yourFormId')) {
+          formStatus.textContent = 'Set your Formspree endpoint in the form action before submitting.';
+          submitButton.disabled = false;
+          submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+          return;
+        }
+
+        try {
+          const response = await fetch(formspreeEndpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              ...payload,
+              _subject: `New Quote Request: ${payload.service}`
+            })
+          });
+
+          if (!response.ok) {
+            throw new Error('Submission failed');
+          }
+
+          contactForm.classList.add('hidden');
+          contactSuccess.classList.remove('hidden');
+        } catch (error) {
+          formStatus.textContent = 'We could not send your request right now. Please try again or email contact@carlsonsolutionsmn.com directly.';
+          submitButton.disabled = false;
+          submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+        }
+      });
+    }
   </script>
 </body>
