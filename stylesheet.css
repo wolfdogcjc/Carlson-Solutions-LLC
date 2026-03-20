@@ -20,6 +20,43 @@ body.light-mode {
   --var-text-main: #0b1220;
 }
 
+body.light-mode #main-header {
+  background: rgba(248, 251, 255, 0.86);
+  border-bottom-color: #cfd8e3;
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+}
+
+body.light-mode .nav-link {
+  color: #334155;
+}
+
+body.light-mode #mobile-menu {
+  background: #f8fbff;
+  border-left: 1px solid #cfd8e3;
+}
+
+body.light-mode #mobile-menu .mobile-link,
+body.light-mode #mobile-menu #mobile-services-toggle,
+body.light-mode #mobile-menu #close-mobile {
+  color: #0b1220;
+}
+
+body.light-mode #mobile-menu #mobile-services-list .mobile-link {
+  color: #0369a1;
+}
+
+body.light-mode #mobile-menu a[href="#contact"],
+body.light-mode #mobile-menu a[href="/#contact"] {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+body.light-mode #mobile-menu a[href="#contact"]:hover,
+body.light-mode #mobile-menu a[href="/#contact"]:hover {
+  background: #0369a1;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -604,6 +641,51 @@ body.light-mode .project-init-btn {
 
 /* Responsive Overrides */
 @media (max-width: 768px) {
+  #mobile-menu {
+    justify-content: flex-start;
+    gap: 1.45rem;
+    padding: 5.75rem 1.25rem 2.5rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #mobile-menu .mobile-link,
+  #mobile-menu #mobile-services-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.35rem 0.4rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    text-align: center;
+    letter-spacing: 0.045em;
+    line-height: 1.25;
+  }
+
+  #mobile-menu #mobile-services-list {
+    width: min(100%, 24rem);
+    margin-top: 0.35rem;
+  }
+
+  #mobile-menu #mobile-services-list:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  #mobile-menu #mobile-services-list .mobile-link {
+    display: block;
+    width: 100%;
+    min-height: 2.4rem;
+    padding: 0.45rem 0.35rem;
+    text-align: center;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
   #main-header .max-w-7xl {
     padding: 0.9rem 1rem;
   }
@@ -710,11 +792,176 @@ body.light-mode .project-init-btn {
   h1 span {
     font-size: 1.75rem; /* Better scaling for mobile headings */
   }
+
+  footer .max-w-7xl {
+    text-align: center;
+  }
+
+  footer .max-w-7xl > p {
+    order: 3;
+    margin: 0 auto;
+    margin-top: 0.7rem;
+    max-width: 32rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    opacity: 0.92;
+  }
+
+  footer .max-w-7xl > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  footer .max-w-7xl > div > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem 1.1rem;
+    order: 2;
+    margin-top: 0.95rem;
+  }
+
+  footer .max-w-7xl > div > div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    order: 1;
+  }
+
+  footer .max-w-7xl > div > div:first-child a {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  footer .max-w-7xl > div > div:last-child a {
+    text-align: center;
+  }
+
+  footer .max-w-7xl > div > div:last-child a i {
+    font-size: 1.7rem;
+  }
+
+  footer .max-w-7xl > div > div:last-child a[href^="mailto:"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 0;
+    border-radius: 9999px;
+    border: 1px solid rgba(var(--cyan-accent), 0.45);
+    color: var(--var-dim);
+  }
+
+  footer .max-w-7xl > div > div:last-child a[href^="mailto:"]::before {
+    content: "✉";
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+
+  #mobile-menu a[href="#contact"],
+  #mobile-menu a[href="/#contact"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 13.5rem;
+    min-height: 3.05rem;
+    padding: 0.9rem 1.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    background: rgb(var(--cyan-accent));
+    color: #020617;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+  }
+
+  #mobile-menu a[href="#contact"]:active,
+  #mobile-menu a[href="/#contact"]:active {
+    transform: translateY(1px);
+    filter: brightness(0.98);
+  }
+
+  #mobile-menu a[href="#contact"]:hover,
+  #mobile-menu a[href="/#contact"]:hover {
+    background: #67e8f9;
+  }
 }
 
 @media (max-width: 420px) {
+  #mobile-menu {
+    padding: 5.1rem 1rem 1.9rem;
+    gap: 1.15rem;
+  }
+
+  #mobile-menu .mobile-link,
+  #mobile-menu #mobile-services-toggle {
+    font-size: 1.3rem;
+    letter-spacing: 0.035em;
+    min-height: 2.7rem;
+    padding: 0.35rem 0.25rem;
+  }
+
+  #mobile-menu #mobile-services-list .mobile-link {
+    font-size: 0.95rem;
+    min-height: 2.4rem;
+    padding: 0.4rem 0.2rem;
+  }
+
+  footer .max-w-7xl > p {
+    font-size: 0.66rem;
+    letter-spacing: 0.035em;
+  }
+
+  footer .max-w-7xl > div > div:first-child a:last-child {
+    flex-basis: 100%;
+  }
+
+  footer .max-w-7xl > div > div:last-child a i {
+    font-size: 1.95rem;
+  }
+
+  footer .max-w-7xl > div > div:last-child a[href^="mailto:"] {
+    width: 2.45rem;
+    height: 2.45rem;
+  }
+
+  footer .max-w-7xl > div > div:last-child a[href^="mailto:"]::before {
+    font-size: 1.35rem;
+  }
+
+  #mobile-menu a[href="#contact"],
+  #mobile-menu a[href="/#contact"] {
+    min-width: 13.5rem;
+    min-height: 3.1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+  }
+
   #main-header .max-w-7xl {
     padding: 0.75rem 0.85rem;
+  }
+
+  #main-header .heading-font {
+    font-size: 0.88rem;
+    max-width: 11.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   #home {
@@ -796,7 +1043,7 @@ body.light-mode .project-init-btn {
   }
 
   #mobile-menu .mobile-link {
-    font-size: 1.45rem;
+    font-size: 1.2rem;
   }
 }
 
