@@ -8,7 +8,6 @@ The website includes a dedicated founder profile page at https://carlsonsolution
 - Website: https://carlsonsolutionsmn.com/
 - Founder/About page: https://carlsonsolutionsmn.com/about/
 - Contact email: contact@carlsonsolutionsmn.com
-- Contact phone: +1-651-348-0615
 - Primary location: Lindstrom, Minnesota, USA
 
 ## Services
@@ -66,7 +65,7 @@ Q: How can customers share feedback?
 A: Customers can leave a Google review using the review link in the testimonials section.
 
 Q: What is the primary business phone number?
-A: +1-651-348-0615.
+A: contact@carlsonsolutionsmn.com.
 
 Q: What is the primary business email?
 A: contact@carlsonsolutionsmn.com.

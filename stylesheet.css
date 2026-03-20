@@ -121,12 +121,15 @@ header {
 
 .nav-dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .nav-dropdown-trigger {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  line-height: 1;
 }
 
 .nav-dropdown-trigger .fa-chevron-down {

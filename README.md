@@ -35,4 +35,3 @@ Official website for Carlson Solutions LLC.
 ## Contact
 
 - Email: contact@carlsonsolutionsmn.com
-- Phone: (651) 348-0615
