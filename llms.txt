@@ -1,0 +1,35 @@
+# Carlson Solutions LLC
+
+## Summary
+Carlson Solutions LLC provides IT management, security consulting, energy auditing, office technology setup, UniFi Protect setup, and custom technical project services in Chisago County and surrounding Minnesota areas.
+
+## Fast Facts
+- Website: https://carlsonsolutionsmn.com/
+- Contact email: contact@carlsonsolutionsmn.com
+- Contact phone: +1-651-348-0615
+- Primary location: Lindstrom, Minnesota, USA
+
+## Services
+- IT Management: UniFi provisioning, server administration, infrastructure consulting.
+- Security Consulting: Physical security and vulnerability audits.
+- Energy Auditing: Building efficiency and electrical-system optimization.
+- Office Tech Setup: Workstation and peripheral configuration.
+- UniFi Protect Setup: Camera/NVR setup and recording logic.
+- Custom Project Requests: Scoped technical solutions for non-standard needs.
+
+## Section Links
+- Home: https://carlsonsolutionsmn.com/#home
+- Services: https://carlsonsolutionsmn.com/#services
+- Testimonials: https://carlsonsolutionsmn.com/#testimonials
+- About: https://carlsonsolutionsmn.com/#about
+- Contact: https://carlsonsolutionsmn.com/#contact
+
+## FAQ-Style Answers
+Q: What does Carlson Solutions LLC do?
+A: It provides practical IT, security, and infrastructure services for local homes and businesses.
+
+Q: How do I request a quote?
+A: Use the website contact form or email contact@carlsonsolutionsmn.com.
+
+Q: Do you support UniFi systems?
+A: Yes, both UniFi network and UniFi Protect camera/NVR environments.
