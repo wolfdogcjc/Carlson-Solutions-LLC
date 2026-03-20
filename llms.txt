@@ -14,7 +14,7 @@ The website includes a dedicated founder profile page at https://carlsonsolution
 ## Services
 - IT Management: UniFi provisioning, server administration, infrastructure consulting.
 - Security Consulting: Physical security and vulnerability audits.
-- Energy Auditing: Building efficiency and electrical-system optimization.
+- Energy Auditing: Vestibule airlock audits, lighting and motion-sensing auto-dimming review, and passive temperature control strategy using blinds.
 - Office Tech Setup: Workstation and peripheral configuration.
 - UniFi Protect Setup: Camera/NVR setup and recording logic.
 - Custom Project Requests: Scoped technical solutions for non-standard needs.
@@ -43,7 +43,7 @@ Q: What kind of security consulting is available?
 A: Carlson Solutions LLC provides physical security and vulnerability auditing focused on entry points, access control, and practical risk reduction.
 
 Q: What is included in energy auditing?
-A: Energy auditing covers building and system efficiency analysis, including electrical-use and operational optimization opportunities.
+A: Energy auditing covers vestibule airlocks, lighting, motion-sensing auto-dimming, and passive temperature control approaches like blinds.
 
 Q: Do you work with homeowners and businesses?
 A: Yes. The site services are designed for homeowners, nonprofits, and small businesses.

@@ -125,7 +125,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Building Efficiency & Energy Auditing",
-            "description": "Technical assessment of building envelopes and electrical systems. Optimizing HVAC air-locks, lighting logic, and curtains for maximum efficiency."
+            "description": "Focused auditing of vestibule airlocks, lighting, motion-sensing auto-dimming, and passive temperature control strategies such as blinds."
           }
         }
       ]
@@ -276,7 +276,18 @@
   <div id="mobile-menu" class="fixed inset-0 bg-zinc-950 z-[100] hidden flex-col items-center justify-center gap-8 border-l border-zinc-800">
     <i class="fas fa-xmark absolute top-8 right-8 text-white hover:text-cyan-400 transition-colors text-3xl cursor-pointer" id="close-mobile"></i>
     <a href="#home" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Home</a>
-    <a href="#services" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Services</a>
+    <div class="flex flex-col items-center gap-3">
+      <button id="mobile-services-toggle" type="button" class="text-2xl font-bold uppercase tracking-widest text-white inline-flex items-center gap-2">
+        Services <i id="mobile-services-chevron" class="fas fa-chevron-down text-sm transition-transform"></i>
+      </button>
+      <div id="mobile-services-list" class="hidden flex-col items-center gap-3">
+        <a href="/services/it-management/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">IT Management</a>
+        <a href="/services/security-consulting/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">Security Consulting</a>
+        <a href="/services/energy-auditing/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">Energy Auditing</a>
+        <a href="/services/office-tech-setup/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">Office Tech Setup</a>
+        <a href="/services/unifi-protect-setup/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">UniFi Protect Setup</a>
+      </div>
+    </div>
     <a href="#testimonials" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Reviews</a>
     <a href="/about/" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">About</a>
     <a href="#contact" class="px-8 py-3 bg-cyan-500 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs">Get a Quote</a>
@@ -291,7 +302,16 @@
       
       <nav class="hidden md:flex items-center gap-x-10">
         <a href="#home" class="nav-link nav-link-active">Home</a>
-        <a href="#services" class="nav-link">Services</a>
+        <div class="nav-dropdown">
+          <a href="#services" class="nav-link nav-dropdown-trigger">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+          <div class="nav-dropdown-menu" role="menu" aria-label="Services">
+            <a href="/services/it-management/" class="nav-dropdown-item" role="menuitem">IT Management</a>
+            <a href="/services/security-consulting/" class="nav-dropdown-item" role="menuitem">Security Consulting</a>
+            <a href="/services/energy-auditing/" class="nav-dropdown-item" role="menuitem">Energy Auditing</a>
+            <a href="/services/office-tech-setup/" class="nav-dropdown-item" role="menuitem">Office Tech Setup</a>
+            <a href="/services/unifi-protect-setup/" class="nav-dropdown-item" role="menuitem">UniFi Protect Setup</a>
+          </div>
+        </div>
         <a href="#testimonials" class="nav-link">Reviews</a>
         <a href="/about/" class="nav-link">About</a>
       </nav>
@@ -363,7 +383,10 @@
             <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
               Comprehensive IT management including UniFi network provisioning, server administration, and strategic consulting for infrastructure scalability.
             </p>
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <a href="/services/it-management/" class="service-read-more inline-flex items-center gap-2 mb-4 font-bold uppercase tracking-widest text-xs">
+              Read More <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <div class="flex flex-wrap gap-2 mt-1">
               <span class="skill-bubble">Consulting</span>
               <span class="skill-bubble">Network Admin</span>
             </div>
@@ -377,7 +400,10 @@
             <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
               Adversarial audits focused on physical vulnerabilities. We identify weaknesses in door hardware, access control, and circuit security.
             </p>
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <a href="/services/security-consulting/" class="service-read-more inline-flex items-center gap-2 mb-4 font-bold uppercase tracking-widest text-xs">
+              Read More <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <div class="flex flex-wrap gap-2 mt-1">
               <span class="skill-bubble">Audit</span>
               <span class="skill-bubble">Physical Security</span>
             </div>
@@ -389,9 +415,12 @@
             </div>
             <h3 class="text-xl font-bold text-var-main mb-3">Energy Auditing</h3>
             <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
-              Technical assessment of building envelope and electrical systems to optimize efficiency. We audit HVAC air-locks, curtains, and lighting logic.
+              Focused auditing of vestibule airlocks, lighting, motion-sensing auto-dimming, and passive temperature control strategies such as blinds.
             </p>
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <a href="/services/energy-auditing/" class="service-read-more inline-flex items-center gap-2 mb-4 font-bold uppercase tracking-widest text-xs">
+              Read More <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <div class="flex flex-wrap gap-2 mt-1">
               <span class="skill-bubble">Efficiency</span>
               <span class="skill-bubble">Infrastructure</span>
             </div>
@@ -405,7 +434,10 @@
             <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
               Integration of workstations, printers, and office peripherals. Professional configuration for local business or home office environments.
             </p>
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <a href="/services/office-tech-setup/" class="service-read-more inline-flex items-center gap-2 mb-4 font-bold uppercase tracking-widest text-xs">
+              Read More <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <div class="flex flex-wrap gap-2 mt-1">
               <span class="skill-bubble">Workstations</span>
               <span class="skill-bubble">Provisioning</span>
             </div>
@@ -419,7 +451,10 @@
             <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
               Configuration of UniFi cameras and NVRs. We program recording logic, detection zones, and remote access on your hardware.
             </p>
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <a href="/services/unifi-protect-setup/" class="service-read-more inline-flex items-center gap-2 mb-4 font-bold uppercase tracking-widest text-xs">
+              Read More <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <div class="flex flex-wrap gap-2 mt-1">
               <span class="skill-bubble">Surveillance</span>
               <span class="skill-bubble">Protect OS</span>
             </div>
@@ -662,6 +697,40 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    function smoothScrollToSection(targetSelector) {
+      const target = document.querySelector(targetSelector);
+      if (!target) return;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function scrollToHashTarget() {
+      if (!window.location.hash) return;
+      smoothScrollToSection(window.location.hash);
+    }
+
+    window.addEventListener('load', () => {
+      const params = new URLSearchParams(window.location.search);
+      const requestedSection = params.get('section');
+
+      if (requestedSection) {
+        const sectionSelector = `#${requestedSection}`;
+        setTimeout(() => {
+          smoothScrollToSection(sectionSelector);
+          const url = new URL(window.location.href);
+          url.searchParams.delete('section');
+          url.hash = requestedSection;
+          window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+        }, 80);
+        return;
+      }
+
+      setTimeout(scrollToHashTarget, 80);
+    });
+
+    window.addEventListener('hashchange', () => {
+      setTimeout(scrollToHashTarget, 10);
+    });
+
     // Theme Toggle Logic
     const themeBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
@@ -734,8 +803,17 @@
     const mobileTrigger = document.getElementById('mobile-bars-trigger');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileNavLinks = document.querySelectorAll('.mobile-link');
+    const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+    const mobileServicesList = document.getElementById('mobile-services-list');
+    const mobileServicesChevron = document.getElementById('mobile-services-chevron');
     mobileTrigger.onclick = () => mobileMenu.style.display = 'flex';
     document.getElementById('close-mobile').onclick = () => mobileMenu.style.display = 'none';
+    if (mobileServicesToggle && mobileServicesList && mobileServicesChevron) {
+      mobileServicesToggle.addEventListener('click', () => {
+        mobileServicesList.classList.toggle('hidden');
+        mobileServicesChevron.classList.toggle('rotate-180');
+      });
+    }
     mobileNavLinks.forEach((link) => {
       link.addEventListener('click', () => {
         mobileMenu.style.display = 'none';
