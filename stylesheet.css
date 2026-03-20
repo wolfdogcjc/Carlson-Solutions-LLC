@@ -34,6 +34,10 @@ body {
   overflow-x: hidden;
 }
 
+#testimonials {
+  scroll-margin-top: 7.5rem;
+}
+
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -115,6 +119,73 @@ header {
   color: rgb(var(--cyan-accent)); 
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.nav-dropdown-trigger .fa-chevron-down {
+  font-size: 0.62rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-trigger .fa-chevron-down,
+.nav-dropdown:focus-within .nav-dropdown-trigger .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  background: var(--var-card);
+  border: 1px solid var(--var-border);
+  border-radius: 0.55rem;
+  padding: 0.45rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  backdrop-filter: blur(10px);
+  z-index: 120;
+  box-shadow: 0 16px 36px -20px rgba(2, 6, 23, 0.7);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-dropdown-item {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--var-dim);
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+  padding: 0.55rem 0.65rem;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus-visible {
+  color: rgb(var(--cyan-accent));
+  border-color: rgba(var(--cyan-accent), 0.45);
+  background: rgba(var(--cyan-accent), 0.08);
+}
+
 .hero-bg {
   background:
     linear-gradient(rgba(var(--cyan-accent), 0.04) 1px, transparent 1px),
@@ -187,6 +258,27 @@ body.light-mode .text-cyan-500 {
   color: #0284c7 !important;
 }
 
+.service-read-more {
+  color: rgb(var(--cyan-accent));
+  width: fit-content;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.service-read-more:hover,
+.service-read-more:focus-visible {
+  color: #67e8f9;
+  transform: translateX(2px);
+}
+
+body.light-mode .service-read-more {
+  color: #0284c7;
+}
+
+body.light-mode .service-read-more:hover,
+body.light-mode .service-read-more:focus-visible {
+  color: #0369a1;
+}
+
 .glow-bar {
   width: 4px;
   background: linear-gradient(to bottom, rgb(var(--cyan-accent)), transparent);
@@ -238,6 +330,83 @@ body.light-mode .text-cyan-500 {
 
 #carousel-dots div {
   transition: all 0.3s ease;
+}
+
+.service-carousel {
+  position: relative;
+  border: 1px solid var(--var-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--var-card);
+}
+
+.service-carousel-track {
+  position: relative;
+  height: 320px;
+}
+
+.service-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.45s ease;
+}
+
+.service-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.service-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f8fafc;
+  background: linear-gradient(to top, rgba(2, 6, 23, 0.78), rgba(2, 6, 23, 0));
+}
+
+.service-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(2, 6, 23, 0.45);
+  color: #f8fafc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.service-carousel-nav:hover {
+  background: rgba(var(--cyan-accent), 0.9);
+  border-color: rgba(var(--cyan-accent), 0.95);
+  color: #020617;
+}
+
+.service-carousel-nav.prev {
+  left: 0.75rem;
+}
+
+.service-carousel-nav.next {
+  right: 0.75rem;
 }
 
 /* Form Styling */
@@ -569,4 +738,13 @@ body.light-mode .project-init-btn {
   #mobile-menu .mobile-link {
     font-size: 1.45rem;
   }
+}
+
+.nav-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
 }

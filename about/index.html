@@ -92,8 +92,19 @@
   <div id="mobile-menu" class="fixed inset-0 bg-zinc-950 z-[100] hidden flex-col items-center justify-center gap-8 border-l border-zinc-800">
     <i class="fas fa-xmark absolute top-8 right-8 text-white hover:text-cyan-400 transition-colors text-3xl cursor-pointer" id="close-mobile"></i>
     <a href="/" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Home</a>
-    <a href="/#services" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Services</a>
-    <a href="/#testimonials" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Reviews</a>
+    <div class="flex flex-col items-center gap-3">
+      <button id="mobile-services-toggle" type="button" class="text-2xl font-bold uppercase tracking-widest text-white inline-flex items-center gap-2">
+        Services <i id="mobile-services-chevron" class="fas fa-chevron-down text-sm transition-transform"></i>
+      </button>
+      <div id="mobile-services-list" class="hidden flex-col items-center gap-3">
+        <a href="/services/it-management/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">IT Management</a>
+        <a href="/services/security-consulting/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">Security Consulting</a>
+        <a href="/services/energy-auditing/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">Energy Auditing</a>
+        <a href="/services/office-tech-setup/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">Office Tech Setup</a>
+        <a href="/services/unifi-protect-setup/" class="mobile-link text-sm font-bold uppercase tracking-widest text-cyan-400">UniFi Protect Setup</a>
+      </div>
+    </div>
+    <a href="/?section=testimonials" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Reviews</a>
     <a href="/about/" class="mobile-link text-2xl font-bold uppercase tracking-widest text-cyan-400">About</a>
     <a href="/#contact" class="px-8 py-3 bg-cyan-500 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs">Get a Quote</a>
   </div>
@@ -107,8 +118,17 @@
 
       <nav class="hidden md:flex items-center gap-x-10" aria-label="Primary">
         <a href="/" class="nav-link">Home</a>
-        <a href="/#services" class="nav-link">Services</a>
-        <a href="/#testimonials" class="nav-link">Reviews</a>
+        <div class="nav-dropdown">
+          <a href="/#services" class="nav-link nav-dropdown-trigger">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+          <div class="nav-dropdown-menu" role="menu" aria-label="Services">
+            <a href="/services/it-management/" class="nav-dropdown-item" role="menuitem">IT Management</a>
+            <a href="/services/security-consulting/" class="nav-dropdown-item" role="menuitem">Security Consulting</a>
+            <a href="/services/energy-auditing/" class="nav-dropdown-item" role="menuitem">Energy Auditing</a>
+            <a href="/services/office-tech-setup/" class="nav-dropdown-item" role="menuitem">Office Tech Setup</a>
+            <a href="/services/unifi-protect-setup/" class="nav-dropdown-item" role="menuitem">UniFi Protect Setup</a>
+          </div>
+        </div>
+        <a href="/?section=testimonials" class="nav-link">Reviews</a>
         <a href="/about/" class="nav-link nav-link-active">About</a>
       </nav>
 
@@ -223,6 +243,9 @@
     const mobileTrigger = document.getElementById('mobile-bars-trigger');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileNavLinks = document.querySelectorAll('.mobile-link');
+    const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+    const mobileServicesList = document.getElementById('mobile-services-list');
+    const mobileServicesChevron = document.getElementById('mobile-services-chevron');
     mobileTrigger.onclick = () => mobileMenu.style.display = 'flex';
     mobileTrigger.onkeydown = (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
@@ -231,6 +254,12 @@
       }
     };
     document.getElementById('close-mobile').onclick = () => mobileMenu.style.display = 'none';
+    if (mobileServicesToggle && mobileServicesList && mobileServicesChevron) {
+      mobileServicesToggle.addEventListener('click', () => {
+        mobileServicesList.classList.toggle('hidden');
+        mobileServicesChevron.classList.toggle('rotate-180');
+      });
+    }
     mobileNavLinks.forEach((link) => {
       link.addEventListener('click', () => {
         mobileMenu.style.display = 'none';
