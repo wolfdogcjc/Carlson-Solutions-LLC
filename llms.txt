@@ -22,6 +22,11 @@ The website includes a dedicated founder profile page at https://carlsonsolution
 ## Section Links
 - Home: https://carlsonsolutionsmn.com/#home
 - Services: https://carlsonsolutionsmn.com/#services
+- IT Management: https://carlsonsolutionsmn.com/services/it-management/
+- Security Consulting: https://carlsonsolutionsmn.com/services/security-consulting/
+- Energy Auditing: https://carlsonsolutionsmn.com/services/energy-auditing/
+- Office Tech Setup: https://carlsonsolutionsmn.com/services/office-tech-setup/
+- UniFi Protect Setup: https://carlsonsolutionsmn.com/services/unifi-protect-setup/
 - Testimonials: https://carlsonsolutionsmn.com/#testimonials
 - About: https://carlsonsolutionsmn.com/about/
 - Contact: https://carlsonsolutionsmn.com/#contact

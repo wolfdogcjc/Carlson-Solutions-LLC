@@ -1,6 +1,12 @@
 User-agent: *
 Allow: /
 Allow: /about/
+Allow: /services/
+Allow: /services/it-management/
+Allow: /services/security-consulting/
+Allow: /services/energy-auditing/
+Allow: /services/office-tech-setup/
+Allow: /services/unifi-protect-setup/
 Allow: /llms.txt
 
 Sitemap: https://carlsonsolutionsmn.com/sitemap.xml

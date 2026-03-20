@@ -189,7 +189,41 @@
     "@type": "WebSite",
     "name": "Carlson Solutions LLC",
     "url": "https://carlsonsolutionsmn.com/",
-    "inLanguage": "en-US"
+    "inLanguage": "en-US",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://carlsonsolutionsmn.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": [
+      "Home",
+      "Services",
+      "IT Management",
+      "Security Consulting",
+      "Energy Auditing",
+      "Office Tech Setup",
+      "UniFi Protect Setup",
+      "Contact",
+      "About"
+    ],
+    "url": [
+      "https://carlsonsolutionsmn.com/",
+      "https://carlsonsolutionsmn.com/#services",
+      "https://carlsonsolutionsmn.com/services/it-management/",
+      "https://carlsonsolutionsmn.com/services/security-consulting/",
+      "https://carlsonsolutionsmn.com/services/energy-auditing/",
+      "https://carlsonsolutionsmn.com/services/office-tech-setup/",
+      "https://carlsonsolutionsmn.com/services/unifi-protect-setup/",
+      "https://carlsonsolutionsmn.com/#contact",
+      "https://carlsonsolutionsmn.com/about/"
+    ]
   }
   </script>
 
@@ -253,7 +287,9 @@
   }
   </script>
 
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="shortcut icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -289,13 +325,14 @@
       </div>
     </div>
     <a href="#testimonials" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Reviews</a>
+    <a href="#contact" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Contact</a>
     <a href="/about/" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">About</a>
     <a href="#contact" class="px-8 py-3 bg-cyan-500 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs">Get a Quote</a>
   </div>
 
   <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-x-4 group">
+      <a href="/" class="flex items-center gap-x-4 group">
         <img src="assets/logo.svg" alt="Carlson Solutions Logo" class="w-10 h-10">
         <span class="heading-font text-xl font-bold tracking-tight text-var-main">Carlson Solutions LLC</span>
       </a>
@@ -313,6 +350,7 @@
           </div>
         </div>
         <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
         <a href="/about/" class="nav-link">About</a>
       </nav>
       
