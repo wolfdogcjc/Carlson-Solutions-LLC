@@ -263,6 +263,11 @@ body.light-mode .text-cyan-500 {
   opacity: 0.6;
 }
 
+textarea.input-field {
+  overflow: hidden;
+  resize: vertical;
+}
+
 /* Animations */
 @keyframes reveal {
   from { opacity: 0; transform: translateY(20px); }
