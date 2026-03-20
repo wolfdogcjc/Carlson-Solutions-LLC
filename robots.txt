@@ -8,5 +8,8 @@ Allow: /services/energy-auditing/
 Allow: /services/office-tech-setup/
 Allow: /services/unifi-protect-setup/
 Allow: /llms.txt
+Disallow: /docs/
+Disallow: /README.md
+Disallow: /wiki/
 
 Sitemap: https://carlsonsolutionsmn.com/sitemap.xml
