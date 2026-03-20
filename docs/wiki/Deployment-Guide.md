@@ -8,7 +8,7 @@ This page documents how the Carlson Solutions LLC website is hosted, deployed, a
 
 The website is hosted on **GitHub Pages** — GitHub's free static site hosting service. The site is served directly from the `main` branch of the repository.
 
-- **Live URL:** `https://wolfdogcjc.github.io/Carlson-Solutions-LLC/` (or a custom domain if configured)
+- **Live URL:** `https://carlsonsolutionsmn.com/`
 - **Source branch:** `main`
 - **Publish directory:** Repository root (`/`)
 - **Build process:** None — the site is pure static HTML/CSS/JS with no build step required
@@ -37,15 +37,14 @@ Developer → git push origin main → GitHub Pages builds → Site is live (wit
 
 ---
 
-## Custom Domain (If Applicable)
+## Custom Domain
 
-If a custom domain (e.g., `carlsonsolutionsmn.com`) is configured:
+The site is live at `carlsonsolutionsmn.com`. The custom domain is configured via:
 
-1. A `CNAME` file must exist at the repository root containing the domain name
-2. DNS records must be set at the domain registrar:
-   - `A` records pointing to GitHub Pages IPs: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - Or a `CNAME` record pointing to `wolfdogcjc.github.io`
-3. HTTPS is enforced automatically by GitHub Pages via Let's Encrypt
+1. DNS `A` records pointing to GitHub Pages IPs: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+2. HTTPS is enforced automatically by GitHub Pages via Let's Encrypt
+
+To update or change the custom domain, modify the `CNAME` file at the repository root (if present) and update the DNS records at the registrar accordingly.
 
 ---
 
@@ -59,6 +58,17 @@ Currently, there is **no automated CI/CD pipeline** beyond GitHub Pages auto-dep
 | Link checking | [lychee](https://github.com/lycheeverse/lychee) | Detect broken internal/external links |
 | Accessibility audit | [axe](https://www.deque.com/axe/) | Ensure WCAG compliance |
 | Performance audit | Lighthouse CI | Track Core Web Vitals over time |
+
+### Supporting Files
+
+The repository includes several files that support production deployment:
+
+| File | Purpose |
+|---|---|
+| `robots.txt` | Instructs search engine crawlers; references the sitemap URL |
+| `sitemap.xml` | XML sitemap for SEO indexing by Google and other search engines |
+| `404.html` | Custom 404 error page served by GitHub Pages on missing routes |
+| `api/send-quote.js` | Serverless function used for quote form submission handling |
 
 ---
 
