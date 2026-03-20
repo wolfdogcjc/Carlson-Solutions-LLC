@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 – Page Not Found | Carlson Solutions LLC</title>
+  <meta name="description" content="The page you are looking for does not exist or has been moved. Return to the Carlson Solutions LLC homepage.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Carlson Solutions LLC">
+  <meta name="theme-color" content="#06b6d4">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://carlsonsolutionsmn.com/404" />
+  <meta property="og:title" content="404 – Page Not Found | Carlson Solutions LLC" />
+  <meta property="og:description" content="The page you are looking for does not exist or has been moved. Return to the Carlson Solutions LLC homepage." />
+  <meta property="og:image" content="https://carlsonsolutionsmn.com/assets/logo.svg" />
+  <meta property="og:site_name" content="Carlson Solutions LLC" />
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/stylesheet.css">
+  <style>
+    .bg-var-card { background-color: var(--var-card); }
+    .text-var-main { color: var(--var-main); }
+    .border-var-border { border-color: var(--var-border); }
+    .text-var-dim { color: var(--var-dim); }
+    .text-var-bg { color: var(--var-bg); }
+    .bg-var-text-main { background-color: var(--var-text-main); }
+  </style>
+</head>
+<body class="antialiased selection:bg-cyan-500/30">
+
+  <div id="mobile-menu" class="fixed inset-0 bg-zinc-950 z-[100] hidden flex-col items-center justify-center gap-8 border-l border-zinc-800">
+    <i class="fas fa-xmark absolute top-8 right-8 text-white hover:text-cyan-400 transition-colors text-3xl cursor-pointer" id="close-mobile"></i>
+    <a href="/#home" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Home</a>
+    <a href="/#services" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Services</a>
+    <a href="/#testimonials" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">Reviews</a>
+    <a href="/#about" class="mobile-link text-2xl font-bold uppercase tracking-widest text-white">About</a>
+    <a href="/#contact" class="px-8 py-3 bg-cyan-500 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs">Get a Quote</a>
+  </div>
+
+  <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-x-4 group">
+        <img src="/assets/logo.svg" alt="Carlson Solutions Logo" class="w-10 h-10">
+        <span class="heading-font text-xl font-bold tracking-tight text-var-main">Carlson Solutions LLC</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-x-10">
+        <a href="/#home" class="nav-link">Home</a>
+        <a href="/#services" class="nav-link">Services</a>
+        <a href="/#testimonials" class="nav-link">Reviews</a>
+        <a href="/#about" class="nav-link">About</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="p-2 w-10 h-10 rounded-md bg-var-card border border-var-border text-var-dim hover:text-cyan-400 transition-all flex items-center justify-center" aria-label="Toggle Theme">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+        <div id="mobile-bars-trigger" class="md:hidden p-2 text-var-main cursor-pointer text-xl">
+          <i class="fas fa-bars"></i>
+        </div>
+        <a href="/#contact" class="header-quote-btn hidden sm:flex px-6 py-2.5 rounded-md font-bold text-xs uppercase tracking-widest transition-all items-center gap-2">
+          Request Quote <i class="fas fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 404 Hero -->
+    <section class="hero-bg pt-48 pb-24 border-b border-var-border">
+      <div class="max-w-3xl mx-auto px-8 text-center animate-reveal relative z-10">
+
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm bg-var-card border border-var-border text-var-dim text-[11px] font-bold uppercase tracking-widest mb-10">
+          <div class="w-2 h-2 bg-cyan-500"></div>
+          Error 404
+        </div>
+
+        <h1 class="heading-font text-7xl md:text-9xl font-bold tracking-tight mb-4 text-var-main leading-none">
+          404
+        </h1>
+        <h2 class="heading-font text-2xl md:text-3xl font-bold mb-6 text-var-main">
+          Page Not Found
+        </h2>
+        <p class="text-var-dim text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
+          The page you're looking for doesn't exist, may have been moved, or the link you followed is incorrect.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/" class="w-full sm:w-auto px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs transition-colors">
+            <i class="fas fa-house mr-2"></i> Back to Homepage
+          </a>
+          <a href="/#contact" class="w-full sm:w-auto px-8 py-4 bg-var-card text-var-main border border-var-border rounded-md font-bold uppercase tracking-widest text-xs transition-colors hover:border-var-dim">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-24 hero-bg">
+      <div class="max-w-4xl mx-auto px-8">
+        <div class="text-center mb-12">
+          <h2 class="heading-font text-3xl font-bold mb-4 text-var-main">Need Help?</h2>
+          <p class="text-var-dim">Can't find what you're looking for? Send us a message and we'll point you in the right direction.</p>
+        </div>
+
+        <form id="contact-form" class="space-y-6 bg-var-card border border-var-border p-8 rounded-lg shadow-sm" action="https://formspree.io/f/mkoqyajo" method="POST" novalidate>
+          <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="text" name="name" class="input-field" placeholder="Full Name / Organization" required>
+            <input type="email" name="email" class="input-field" placeholder="Official Email Address" required>
+          </div>
+          <select name="service" class="input-field appearance-none" required>
+            <option value="" disabled selected>Select Core Service Needed</option>
+            <option>IT Management &amp; Consulting</option>
+            <option>Security Consulting &amp; Audit</option>
+            <option>Energy Auditing</option>
+            <option>Office System Setup</option>
+            <option>UniFi Protect Configuration</option>
+            <option>Other / Custom Request</option>
+          </select>
+          <textarea rows="5" name="message" class="input-field" placeholder="Describe your current infrastructure setup and requirements..." required></textarea>
+          <button id="contact-submit" type="submit" class="w-full px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-zinc-950 rounded-md font-bold uppercase tracking-widest text-xs transition-colors">
+            Submit Specifications
+          </button>
+          <p id="contact-form-status" class="text-var-dim text-xs hidden" role="status" aria-live="polite"></p>
+        </form>
+
+        <div id="contact-success" class="hidden bg-var-card border border-var-border p-8 rounded-lg shadow-sm text-center">
+          <p class="text-cyan-500 uppercase tracking-widest text-[11px] font-bold mb-3">Request Received</p>
+          <h3 class="heading-font text-2xl font-bold text-var-main mb-3">Thank You</h3>
+          <p class="text-var-dim leading-relaxed max-w-xl mx-auto">Thank you for submitting your quote request. We received your details and will reach out shortly to discuss your project.</p>
+        </div>
+
+        <div class="mt-16 flex flex-col items-center gap-4 text-var-main font-semibold">
+          <a href="mailto:contact@carlsonsolutionsmn.com" class="hover:text-cyan-500 transition-colors border-b border-var-border pb-1">contact@carlsonsolutionsmn.com</a>
+          <p class="tracking-widest">(651) 348-0615</p>
+          <div class="flex gap-6 mt-6">
+            <a href="https://www.linkedin.com/company/carlson-solutions-mn/" target="_blank" rel="noopener noreferrer" class="text-xl text-var-dim hover:text-cyan-500 transition-colors"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/p/Carlson-Solutions-LLC-61576075333873/" target="_blank" rel="noopener noreferrer" class="text-xl text-var-dim hover:text-cyan-500 transition-colors"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8 bg-var-card border-t border-var-border">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-var-dim text-[10px] font-bold uppercase tracking-[0.1em]">
+        &copy; <span id="year"></span> Carlson Solutions LLC. All rights reserved.
+      </p>
+      <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-var-dim">
+        <a href="/assets/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-500 transition-colors">Privacy</a>
+        <a href="/assets/terms-of-service.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-500 transition-colors">Terms</a>
+        <a href="/assets/data-protection.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-500 transition-colors">Data Security</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme Toggle Logic
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light') enableLight();
+
+    themeBtn.addEventListener('click', () => {
+      body.classList.contains('light-mode') ? enableDark() : enableLight();
+    });
+
+    function enableLight() {
+      body.classList.add('light-mode');
+      themeIcon.className = 'fas fa-moon';
+      localStorage.setItem('theme', 'light');
+    }
+
+    function enableDark() {
+      body.classList.remove('light-mode');
+      themeIcon.className = 'fas fa-sun';
+      localStorage.setItem('theme', 'dark');
+    }
+
+    // Scroll Header
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      header.style.background = window.scrollY > 50 ? 'var(--var-card)' : 'transparent';
+    });
+
+    // Mobile Menu
+    const mobileTrigger = document.getElementById('mobile-bars-trigger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-link');
+    mobileTrigger.onclick = () => mobileMenu.style.display = 'flex';
+    document.getElementById('close-mobile').onclick = () => mobileMenu.style.display = 'none';
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+      });
+    });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const contactSuccess = document.getElementById('contact-success');
+    const submitButton = document.getElementById('contact-submit');
+    const formStatus = document.getElementById('contact-form-status');
+
+    if (contactForm && contactSuccess && submitButton && formStatus) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+          formStatus.textContent = 'Please complete all required fields before submitting.';
+          formStatus.classList.remove('hidden');
+          return;
+        }
+
+        const formData = new FormData(contactForm);
+        const payload = {
+          name: String(formData.get('name') || '').trim(),
+          email: String(formData.get('email') || '').trim(),
+          service: String(formData.get('service') || '').trim(),
+          message: String(formData.get('message') || '').trim(),
+          website: String(formData.get('website') || '').trim()
+        };
+
+        submitButton.disabled = true;
+        submitButton.classList.add('opacity-70', 'cursor-not-allowed');
+        formStatus.textContent = 'Submitting your request...';
+        formStatus.classList.remove('hidden');
+
+        const formspreeEndpoint = contactForm.getAttribute('action') || '';
+
+        if (!formspreeEndpoint || formspreeEndpoint.includes('yourFormId')) {
+          formStatus.textContent = 'Set your Formspree endpoint in the form action before submitting.';
+          submitButton.disabled = false;
+          submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+          return;
+        }
+
+        try {
+          const response = await fetch(formspreeEndpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              ...payload,
+              _subject: `New Quote Request: ${payload.service}`
+            })
+          });
+
+          if (!response.ok) {
+            throw new Error('Submission failed');
+          }
+
+          contactForm.classList.add('hidden');
+          contactSuccess.classList.remove('hidden');
+        } catch (error) {
+          formStatus.textContent = 'We could not send your request right now. Please try again or email contact@carlsonsolutionsmn.com directly.';
+          submitButton.disabled = false;
+          submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
