@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Primary page (highest priority) -->
   <url>
     <loc>https://carlsonsolutionsmn.com/</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- Service pages (sub-pages with secondary priority) -->
   <url>
-    <loc>https://carlsonsolutionsmn.com/llms.txt</loc>
+    <loc>https://carlsonsolutionsmn.com/services/it-management/</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://carlsonsolutionsmn.com/services/security-consulting/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://carlsonsolutionsmn.com/services/energy-auditing/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://carlsonsolutionsmn.com/services/office-tech-setup/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://carlsonsolutionsmn.com/services/unifi-protect-setup/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://carlsonsolutionsmn.com/services/infrastructure-fabrication/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Supplementary pages -->
   <url>
     <loc>https://carlsonsolutionsmn.com/about/</loc>
     <lastmod>2026-03-20</lastmod>
@@ -19,33 +54,9 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://carlsonsolutionsmn.com/services/it-management/</loc>
+    <loc>https://carlsonsolutionsmn.com/llms.txt</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://carlsonsolutionsmn.com/services/security-consulting/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://carlsonsolutionsmn.com/services/energy-auditing/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://carlsonsolutionsmn.com/services/office-tech-setup/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://carlsonsolutionsmn.com/services/unifi-protect-setup/</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

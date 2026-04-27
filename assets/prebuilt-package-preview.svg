@@ -1,0 +1,77 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="60" x2="1080" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131A"/>
+      <stop offset="1" stop-color="#0B1F28"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="360" y1="220" x2="840" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17232A"/>
+      <stop offset="1" stop-color="#0F171D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="390" y1="260" x2="810" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#27D5E5"/>
+      <stop offset="1" stop-color="#0EA5B5"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="410" y1="290" x2="790" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8D36A"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="glow" x="180" y="120" width="840" height="700" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.13 0 0 0 0 0.83 0 0 0 0 0.89 0 0 0 0.3 0" result="glowColor"/>
+      <feMerge>
+        <feMergeNode in="glowColor"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#1D3A44" stroke-width="1" opacity="0.32"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#grid)" opacity="0.45"/>
+
+  <circle cx="265" cy="210" r="170" fill="#0EA5B5" opacity="0.12"/>
+  <circle cx="960" cy="680" r="220" fill="#27D5E5" opacity="0.08"/>
+
+  <rect x="180" y="150" width="840" height="600" rx="36" fill="#09141A" stroke="#1B3942" stroke-width="2"/>
+  <rect x="210" y="180" width="780" height="540" rx="28" fill="url(#panel)" stroke="#2D4B55" stroke-width="1.5"/>
+
+  <g filter="url(#glow)">
+    <rect x="300" y="255" width="600" height="420" rx="28" fill="#0C1116" stroke="url(#accent)" stroke-width="3"/>
+    <rect x="336" y="292" width="252" height="70" rx="16" fill="#12232B" stroke="#2A5E6B" stroke-width="1.5"/>
+    <rect x="612" y="292" width="252" height="70" rx="16" fill="#12232B" stroke="#2A5E6B" stroke-width="1.5"/>
+    <rect x="336" y="388" width="528" height="118" rx="18" fill="#111820" stroke="#2A5E6B" stroke-width="1.5"/>
+    <rect x="336" y="528" width="252" height="88" rx="18" fill="#111820" stroke="#2A5E6B" stroke-width="1.5"/>
+    <rect x="612" y="528" width="252" height="88" rx="18" fill="#111820" stroke="#2A5E6B" stroke-width="1.5"/>
+
+    <g opacity="0.95">
+      <circle cx="375" cy="326" r="10" fill="url(#accent)"/>
+      <circle cx="405" cy="326" r="10" fill="url(#amber)"/>
+      <circle cx="435" cy="326" r="10" fill="#27D5E5"/>
+      <rect x="470" y="316" width="86" height="20" rx="10" fill="#1A2C35"/>
+
+      <circle cx="651" cy="326" r="10" fill="url(#accent)"/>
+      <circle cx="681" cy="326" r="10" fill="url(#amber)"/>
+      <circle cx="711" cy="326" r="10" fill="#27D5E5"/>
+      <rect x="746" y="316" width="86" height="20" rx="10" fill="#1A2C35"/>
+
+      <rect x="364" y="420" width="164" height="18" rx="9" fill="#1A2C35"/>
+      <rect x="364" y="452" width="220" height="18" rx="9" fill="#1A2C35"/>
+      <rect x="364" y="484" width="182" height="18" rx="9" fill="#1A2C35"/>
+
+      <rect x="640" y="420" width="164" height="18" rx="9" fill="#1A2C35"/>
+      <rect x="640" y="452" width="220" height="18" rx="9" fill="#1A2C35"/>
+      <rect x="640" y="484" width="182" height="18" rx="9" fill="#1A2C35"/>
+
+      <rect x="362" y="562" width="124" height="24" rx="12" fill="url(#accent)" opacity="0.22"/>
+      <rect x="638" y="562" width="124" height="24" rx="12" fill="url(#amber)" opacity="0.22"/>
+    </g>
+  </g>
+
+  <g opacity="0.9">
+    <text x="248" y="760" fill="#E8F4F7" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700">Signature Outdoor Infrastructure Package</text>
+    <text x="248" y="802" fill="#9FB8C0" font-family="Inter, Arial, sans-serif" font-size="20">Pre-built, made to order, and ready to be customized to your exact spec.</text>
+  </g>
+</svg>

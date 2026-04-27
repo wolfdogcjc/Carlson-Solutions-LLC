@@ -16,6 +16,7 @@ The website includes a dedicated founder profile page at https://carlsonsolution
 - Energy Auditing: Vestibule airlock audits, lighting and motion-sensing auto-dimming review, and passive temperature control strategy using blinds.
 - Office Tech Setup: Workstation and peripheral configuration.
 - UniFi Protect Setup: Camera/NVR setup and recording logic.
+- Infrastructure Fabrication (CIN-1): Hardened enclosure-based networking and security node assembly with configurable modules.
 - Custom Project Requests: Scoped technical solutions for non-standard needs.
 
 ## Section Links
@@ -26,6 +27,7 @@ The website includes a dedicated founder profile page at https://carlsonsolution
 - Energy Auditing: https://carlsonsolutionsmn.com/services/energy-auditing/
 - Office Tech Setup: https://carlsonsolutionsmn.com/services/office-tech-setup/
 - UniFi Protect Setup: https://carlsonsolutionsmn.com/services/unifi-protect-setup/
+- Infrastructure Fabrication: https://carlsonsolutionsmn.com/services/infrastructure-fabrication/
 - Testimonials: https://carlsonsolutionsmn.com/#testimonials
 - About: https://carlsonsolutionsmn.com/about/
 - Contact: https://carlsonsolutionsmn.com/#contact

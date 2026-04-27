@@ -519,6 +519,93 @@ body.light-mode .service-read-more:focus-visible {
   transition: border-color 0.3s, background 0.3s;
 }
 
+.info-tip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.05rem;
+  padding: 0;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  color: #9ca3af;
+  cursor: help;
+  flex-shrink: 0;
+  vertical-align: middle;
+  overflow: visible;
+  z-index: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.info-tip::before {
+  content: "\f05a";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.info-tip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.35rem);
+  transform: translateX(-50%) translateY(0.2rem);
+  min-width: 12rem;
+  max-width: 18rem;
+  width: max-content;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.55rem;
+  background: rgba(17, 24, 39, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  box-shadow: 0 14px 34px -20px rgba(2, 6, 23, 0.9);
+  color: #f8fafc;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  white-space: normal;
+  text-transform: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 60;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+.info-tip:hover,
+.info-tip:focus-visible {
+  color: #6b7280;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.info-tip:hover::after,
+.info-tip:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+body.light-mode .info-tip {
+  color: #6b7280;
+}
+
+body.light-mode .info-tip::after {
+  background: rgba(248, 250, 252, 0.98);
+  border-color: rgba(148, 163, 184, 0.45);
+  color: #0f172a;
+  box-shadow: 0 14px 34px -20px rgba(15, 23, 42, 0.45);
+}
+
+body.light-mode .info-tip:hover,
+body.light-mode .info-tip:focus-visible {
+  color: #475569;
+}
+
 .input-field:focus {
   border-color: rgb(var(--cyan-accent));
   background: var(--var-bg);
