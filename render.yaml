@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: carlson-solutions
+    buildCommand: echo "Static site"
+    startCommand: echo "Static site"
+    staticPublishPath: ./
+    headers:
+      - path: /sitemap.xml
+        values:
+          Content-Type: application/xml
+          Cache-Control: max-age=3600
+      - path: /robots.txt
+        values:
+          Content-Type: text/plain
+          Cache-Control: max-age=3600
