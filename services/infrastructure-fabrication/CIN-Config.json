@@ -1,0 +1,259 @@
+{
+  "Formula": {
+    "BaseFee": 120,
+    "HourlyRate": 95,
+    "Markup": 1.15,
+    "EstTax": 0.075,
+    "Deposit": 500,
+    "CalibrationFee": 199,
+    "TerminationEndsPerPort": 2
+  },
+  "Shipping": {
+    "LocalPickup": 0,
+    "RegionalFlatRate": 250,
+    "NationalCratedFreight": 450,
+    "WhiteGlove": 850,
+    "DefaultMethod": "",
+    "Title": "Shipping / Delivery",
+    "Description": "Choose the delivery method that best matches your timeline, destination, and handling needs.",
+    "Methods": [
+      {
+        "id": "pickup",
+        "label": "Local Pickup",
+        "priceKey": "LocalPickup",
+        "description": "Customer pickup or local handoff with no freight charge."
+      },
+      {
+        "id": "regional",
+        "label": "Regional Flat Rate",
+        "priceKey": "RegionalFlatRate",
+        "description": "Flat-rate regional shipping for nearby destinations."
+      },
+      {
+        "id": "national",
+        "label": "National Crated Freight",
+        "priceKey": "NationalCratedFreight",
+        "description": "Crated freight for longer-distance delivery and heavier builds."
+      },
+      {
+        "id": "white-glove",
+        "label": "White Glove Delivery",
+        "priceKey": "WhiteGlove",
+        "description": "Premium delivery and handling for complex or sensitive shipments."
+      }
+    ]
+  },
+  "Monitoring": {
+    "BaseMonthly": 49.99,
+    "ComplexityRate": 0.015,
+    "Label": "Carlson Guard Active Monitoring",
+    "Description": "Single monitoring option that updates automatically with the hardware subtotal.",
+    "NoneLabel": "No Active Monitoring",
+    "NoneDescription": "Leave unchecked for a fabrication-only build."
+  },
+  "UI": {
+    "HeroEyebrow": "Systems Fabrication",
+    "HeroTitle": "Infrastructure Architecture Configurator",
+    "HeroSubtitle": "Build and price your infrastructure package using a scalable fabrication framework powered by centralized product data.",
+    "PremadeLabel": "Pre-Built Infrastructure Package",
+    "CustomLabel": "Custom Fabrication Unit",
+    "CustomDescription": "Start from your selected enclosure and configure from the ground up.",
+    "PremadeModeText": "Mode: Pre-built package with optional upgrades",
+    "PremadeUpgradeNote": "Base package includes its core switching and power architecture. Add upgrades below as needed.",
+    "SurgeProtectionTitle": "Surge Protection",
+    "SurgeProtectionDescription": "Choose optional surge protection sized by protected port count. This adds to termination requirements.",
+    "LineItemsTitle": "Selected Components and Sub-Costs",
+    "EnclosureNote": "Final enclosure dimensions will be confirmed with you before order processing. We will try to source to spec, but availability and lead time may require an equivalent size.",
+    "Disclaimer": "Carlson Solutions LLC is a specialized manufacturer. We fabricate and configure technical hardware units. We do NOT provide on-site installation, electrical wiring, or cable pulling. Customers are responsible for mounting and hiring licensed professionals for all field wiring.",
+    "InfoTexts": {
+      "FabricationFee": "Covers design complexity, calibration overhead, and risk-adjusted build operations beyond raw hardware cost.",
+      "EstimatedTax": "Estimated using configured tax rate and final fabrication total; final invoice may vary by jurisdiction.",
+      "EstimatedShipping": "Estimated shipping reserve based on packaging class and delivery profile.",
+      "CalibrationFee": "One-time calibration and commissioning fee due now when active monitoring is selected.",
+      "MonitoringMonthly": "Subscription estimate updates with hardware complexity: 49.99 + (Hardware Subtotal x 0.015).",
+      "Deposit": "Required to secure production capacity and kickoff technical review. Applied against final balance."
+    },
+    "FeatureCards": [
+      {
+        "id": "wd-purple",
+        "title": "Made-to-Order, Fully Customizable",
+        "description": "Every package is built to your exact site requirements, with enclosure size, ports, power, and layout matched to the job."
+      },
+      {
+        "id": "keystone",
+        "title": "Precision Termination Testing",
+        "description": "Every termination is digitally wire-mapped and verified for PoE++ power delivery and clean 10G data integrity before the build leaves our shop."
+      },
+      {
+        "id": "rj45",
+        "title": "Guaranteed Port Performance",
+        "description": "You are not just paying for the plug. You are paying for verified, maximum-rated port performance with no packet loss or power drops when the system goes live."
+      },
+      {
+        "id": "deposit",
+        "title": "Design Review Deposit ($500)",
+        "description": "Your $500 deposit secures your build slot and initiates a 1-on-1 technical review of your site requirements before we begin fabrication."
+      }
+    ]
+  },
+  "Enclosures": [
+    { "id": "small", "name": "Small Fabrication Unit (1ft x 1ft)", "price": 220, "hours": 2.5, "widthFt": 1, "depthFt": 1, "recommendedMaxPorts": 12, "tempRange": "Up to 40C", "description": "Compact enclosure for small network, camera, or support builds." },
+    { "id": "medium", "name": "Standard Venue Unit (1.5ft x 3ft)", "price": 390, "hours": 4.5, "widthFt": 1.5, "depthFt": 3, "recommendedMaxPorts": 28, "tempRange": "Up to 40C", "description": "Rectangular enclosure with a better footprint for mid-size routing and switching layouts." },
+    { "id": "twobytwo", "name": "Square Facility Unit (2ft x 2ft)", "price": 480, "hours": 5.5, "widthFt": 2, "depthFt": 2, "recommendedMaxPorts": 40, "tempRange": "Up to 45C", "description": "Square enclosure for flexible mid-size or dense builds." },
+    { "id": "industrial", "name": "Industrial Facility Unit (3ft x 3ft)", "price": 680, "hours": 7.5, "widthFt": 3, "depthFt": 3, "recommendedMaxPorts": 999, "tempRange": "Up to 50C (w/ Thermal Kit)", "description": "Large enclosure for denser systems, thermal headroom, and expanded terminations." }
+  ],
+  "PremadeConfigs": [
+    {
+      "id": "signature-outdoor",
+      "name": "Signature Outdoor Infrastructure Package",
+      "desc": "Proven outdoor spec: dual 2.5G switching, 420W power, and hardened enclosure architecture.",
+      "basePrice": 4429.99,
+      "description": "Prebuilt baseline package for outdoor-ready infrastructure fabrication."
+    }
+  ],
+  "Hardware": {
+    "Routing": [
+      {
+        "id": "ucg-fiber",
+        "name": "Cloud Gateway Fiber (1TB)",
+        "price": 399,
+        "hours": 1.0,
+        "portCount": 4,
+        "ports": "4x 2.5GbE",
+        "temp": "-10 to 40 C",
+        "desc": "Desktop 10G gateway with integrated 2.5GbE switching and selectable NVR storage."
+      },
+      {
+        "id": "udm-pro",
+        "name": "Dream Machine Pro",
+        "price": 379,
+        "hours": 1.2,
+        "portCount": 11,
+        "ports": "9x GbE, 2x 10G SFP+",
+        "temp": "-10 to 40 C",
+        "desc": "10G Cloud Gateway with 3.5 Gbps IPS routing and 1x 3.5in HDD bay for storage."
+      },
+      {
+        "id": "udm-se",
+        "name": "Dream Machine Special Edition",
+        "price": 499,
+        "hours": 1.5,
+        "portCount": 11,
+        "ports": "8x GbE PoE, 1x 2.5GbE WAN, 2x 10G SFP+",
+        "temp": "-10 to 40 C",
+        "poeBudget": "180W",
+        "desc": "Integrated 180W PoE budget with a 128GB SSD for faster OS experience."
+      }
+    ],
+    "Switching": [
+      {
+        "id": "flex25",
+        "name": "UniFi Flex 2.5G",
+        "price": 159,
+        "hours": 0.5,
+        "portCount": 9,
+        "ports": "8x 2.5GbE, 1x 10G Combo",
+        "temp": "-20 to 45 C",
+        "desc": "Flexible 8-port 2.5 GbE switch with a 10 GbE RJ45/SFP+ uplink."
+      },
+      {
+        "id": "flex25-poe",
+        "name": "UniFi Flex 2.5G PoE",
+        "price": 199,
+        "hours": 0.7,
+        "portCount": 9,
+        "ports": "8x 2.5GbE PoE++, 1x 10G Combo",
+        "temp": "-20 to 45 C",
+        "poeBudget": "196W (with AC Adapter)",
+        "desc": "Flexible 8-port 2.5 GbE PoE++ switch capable of 196W total output."
+      },
+      {
+        "id": "std-16-poe",
+        "name": "UniFi Standard 16 PoE",
+        "price": 299,
+        "hours": 1,
+        "portCount": 18,
+        "ports": "16x GbE (8x PoE), 2x 1G SFP",
+        "temp": "-5 to 40 C",
+        "poeBudget": "42W",
+        "desc": "16-port Layer 2 PoE switch with a silent, fanless cooling system."
+      },
+      {
+        "id": "pro-24-poe",
+        "name": "UniFi Pro 24 PoE",
+        "price": 699,
+        "hours": 1.5,
+        "portCount": 26,
+        "ports": "24x GbE (16x PoE+, 8x PoE++), 2x 10G SFP+",
+        "temp": "-5 to 40 C",
+        "poeBudget": "400W",
+        "desc": "24-port Layer 3 switch capable of high-power PoE++ output."
+      }
+    ],
+    "NVR": [
+      {
+        "id": "unvr-instant",
+        "name": "Network Video Recorder Instant",
+        "price": 199,
+        "hours": 0.5,
+        "maxDriveBays": 1,
+        "portCount": 6,
+        "ports": "6x PoE, 1x HDMI",
+        "temp": "0 to 40 C",
+        "desc": "Compact UniFi Protect NVR with integrated 6-port PoE switch and single 3.5in HDD bay."
+      },
+      {
+        "id": "unvr",
+        "name": "Network Video Recorder",
+        "price": 299,
+        "hours": 1,
+        "maxDriveBays": 4,
+        "portCount": 2,
+        "ports": "1x GbE, 1x 10G SFP+",
+        "temp": "-5 to 40 C",
+        "desc": "4-bay video recorder supporting up to 30 days of storage for 18 4K cameras."
+      },
+      {
+        "id": "unvr-pro",
+        "name": "Network Video Recorder Pro",
+        "price": 499,
+        "hours": 2,
+        "maxDriveBays": 7,
+        "portCount": 2,
+        "ports": "1x GbE, 1x 10G SFP+",
+        "temp": "-5 to 40 C",
+        "desc": "2U-sized 7-bay video recorder supporting up to 60 days of storage for 24 4K cameras."
+      }
+    ],
+    "Drives": [
+      { "id": "wd8tb", "name": "8TB Surveillance Drive", "price": 245, "hours": 0, "description": "Entry retention drive for lighter recording workloads." },
+      { "id": "wd16tb", "name": "16TB Surveillance Drive", "price": 410, "hours": 0, "description": "Balanced drive option for longer retention and denser video archives." },
+      { "id": "wd24tb", "name": "24TB Surveillance Drive", "price": 820, "hours": 0, "description": "High-capacity surveillance drive for maximum storage retention." }
+    ],
+    "Power": [
+      { "id": "power-strip-8", "name": "Power Strip (8 Outlet)", "price": 65, "hours": 0.2, "description": "Basic 8-outlet power distribution strip for enclosure layouts." },
+      { "id": "single210", "name": "Single 210W Power Supply", "price": 115, "hours": 1, "description": "Basic power module for smaller assemblies." },
+      { "id": "dual420", "name": "Dual 420W Power System", "price": 230, "hours": 2, "description": "Redundant-style power setup for mid-size systems." },
+      { "id": "high-capacity", "name": "High-Capacity 500W Power System", "price": 340, "hours": 2.2, "description": "Higher-output power solution for larger or denser builds." },
+      { "id": "ups", "name": "Integrated UPS Battery Backup", "price": 250, "hours": 1, "description": "Battery backup module to keep the system alive during power interruptions." }
+    ],
+    "Thermal": [
+      { "id": "active-thermal", "name": "Active Thermal Exhaust Kit", "price": 95, "hours": 1, "description": "Fan-assisted exhaust package for heat management in enclosed systems." },
+      { "id": "cold-kit", "name": "Extreme Cold Thermal Kit", "price": 125, "hours": 1, "description": "Cold-weather protection set for harsh environments." },
+      { "id": "sensor-pack", "name": "Internal Thermal Sensor Pack", "price": 79, "hours": 0.4, "description": "Temperature monitoring add-on for thermal reporting and control." }
+    ],
+    "Needs": [
+      { "id": "patch-panel", "name": "Compact Patch Panel Integration", "price": 110, "hours": 0.7, "description": "Patch panel layout assistance for organized terminations." },
+      { "id": "labeling", "name": "Structured Labeling and Port Mapping", "price": 75, "hours": 0.5, "description": "Labeling and mapping package for easier deployment and serviceability." }
+    ],
+    "SurgeProtection": [
+      { "id": "none", "name": "No Surge Protection", "price": 0, "hours": 0, "protectedPorts": 0, "description": "No additional surge module selected." },
+      { "id": "surge-4", "name": "4-Port Surge Protection", "price": 70, "hours": 0.2, "protectedPorts": 4, "description": "Protects up to 4 ports." },
+      { "id": "surge-16", "name": "16-Port Surge Protection", "price": 500, "hours": 0.8, "protectedPorts": 16, "description": "Protects up to 16 ports." }
+    ],
+    "Terminations": [
+      { "id": "keystone", "name": "Keystone Termination", "price": 20, "hours": 0.2, "description": "Female keystone end for enclosure or patch-panel side termination." },
+      { "id": "male-rj45", "name": "Male RJ45 Termination", "price": 20, "hours": 0.1, "description": "Male RJ45 plug end for device-facing wire terminations." }
+    ]
+  }
+}
