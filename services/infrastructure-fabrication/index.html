@@ -66,6 +66,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheet.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQDL8CR96V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KQDL8CR96V');
+  </script>
 </head>
 <body class="antialiased selection:bg-cyan-500/30">
 
@@ -162,7 +172,7 @@
               <i class="fas fa-chevron-right text-sm"></i>
             </button>
             <button id="prebuilt-gallery-open" type="button" class="absolute inset-0 z-10 cursor-zoom-in text-left" aria-label="Open image in larger view">
-              <img id="prebuilt-gallery-image" src="/assets/prebuilt-package-preview.jpeg" alt="Actual pre-built infrastructure package example" class="absolute inset-0 w-full h-full object-cover">
+              <img id="prebuilt-gallery-image" src="/assets/prebuilt-package-preview.jpeg" alt="Actual pre-built infrastructure package example" class="absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async">
             </button>
             <div class="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/20"></div>
             <div class="absolute bottom-4 left-4 z-20 rounded-full bg-black/55 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white/90 backdrop-blur-sm" id="prebuilt-gallery-counter">1 / 1</div>
@@ -200,7 +210,7 @@
           <i class="fas fa-chevron-right text-sm"></i>
         </button>
         <div id="prebuilt-gallery-modal-backdrop" class="absolute inset-0"></div>
-        <img id="prebuilt-gallery-modal-image" src="/assets/prebuilt-package-preview.jpeg" alt="Prebuilt infrastructure package image" class="relative z-10 mx-auto max-h-[85vh] w-auto max-w-full rounded-2xl shadow-2xl shadow-black/50 object-contain">
+        <img id="prebuilt-gallery-modal-image" src="/assets/prebuilt-package-preview.jpeg" alt="Prebuilt infrastructure package image" class="relative z-10 mx-auto max-h-[85vh] w-auto max-w-full rounded-2xl shadow-2xl shadow-black/50 object-contain" loading="lazy" decoding="async">
         <div class="mt-3 text-center text-xs uppercase tracking-widest text-white/70" id="prebuilt-gallery-modal-counter">1 / 1</div>
       </div>
     </div>

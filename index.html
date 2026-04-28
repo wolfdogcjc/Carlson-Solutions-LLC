@@ -358,6 +358,16 @@
     .text-var-bg { color: var(--var-bg); }
     .bg-var-text-main { background-color: var(--var-text-main); }
   </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQDL8CR96V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KQDL8CR96V');
+  </script>
 </head>
 <body class="antialiased selection:bg-cyan-500/30">
 
@@ -501,6 +511,23 @@
 
           <div class="project-card p-8 flex flex-col">
             <div class="service-icon-box mb-6">
+              <i class="fas fa-industry text-xl text-var-main"></i>
+            </div>
+            <h3 class="text-xl font-bold text-var-main mb-3">Infrastructure Fabrication</h3>
+            <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
+              Configure scalable fabrication units and infrastructure packages with hardened enclosure options, modular upgrades, and transparent estimate modeling.
+            </p>
+            <a href="/services/infrastructure-fabrication/" class="service-read-more inline-flex items-center gap-2 mb-4 font-bold uppercase tracking-widest text-xs">
+              Read More <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <span class="skill-bubble">Fabrication Units</span>
+              <span class="skill-bubble">Infrastructure Packages</span>
+            </div>
+          </div>
+
+          <div class="project-card p-8 flex flex-col">
+            <div class="service-icon-box mb-6">
               <i class="fas fa-bolt-lightning text-xl text-var-main"></i>
             </div>
             <h3 class="text-xl font-bold text-var-main mb-3">Energy Auditing</h3>
@@ -547,23 +574,6 @@
             <div class="flex flex-wrap gap-2 mt-1">
               <span class="skill-bubble">Surveillance</span>
               <span class="skill-bubble">Protect OS</span>
-            </div>
-          </div>
-
-          <div class="project-card p-8 flex flex-col">
-            <div class="service-icon-box mb-6">
-              <i class="fas fa-industry text-xl text-var-main"></i>
-            </div>
-            <h3 class="text-xl font-bold text-var-main mb-3">Infrastructure Fabrication</h3>
-            <p class="text-var-dim text-sm leading-relaxed mb-6 flex-grow">
-              Configure scalable fabrication units and infrastructure packages with hardened enclosure options, modular upgrades, and transparent estimate modeling.
-            </p>
-            <a href="/services/infrastructure-fabrication/" class="service-read-more inline-flex items-center gap-2 mb-4 font-bold uppercase tracking-widest text-xs">
-              Read More <i class="fas fa-arrow-right text-[10px]"></i>
-            </a>
-            <div class="flex flex-wrap gap-2 mt-1">
-              <span class="skill-bubble">Fabrication Units</span>
-              <span class="skill-bubble">Infrastructure Packages</span>
             </div>
           </div>
 
