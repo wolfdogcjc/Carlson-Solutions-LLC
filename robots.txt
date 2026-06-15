@@ -7,7 +7,6 @@ Allow: /services/security-consulting/
 Allow: /services/energy-auditing/
 Allow: /services/office-tech-setup/
 Allow: /services/unifi-protect-setup/
-Allow: /services/infrastructure-fabrication/
 Allow: /llms.txt
 Disallow: /docs/
 Disallow: /README.md
